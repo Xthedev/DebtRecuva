@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Debt Recuva - Dashboard</title>
+        <!-- Font Awesome CSS File -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+        <!-- Bootstrap CSS File -->
+        <link rel="stylesheet" href="../assets/bootstrap-5.0.2-dist/css/bootstrap.css">
+        <!-- Debt Recova -->
+        <link rel="stylesheet" href="../assets/css/debt.css">
+    </head>
+    <body>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div style="border-radius: 28px;" class="modal-content border-0 p-4">
+                    <div class="card border-0">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Assign Target</h5>
+                            <div class="col-12 mt-3">
+                                <label for="exampleFormControlInput1" class="form-label">Agent</label>
+                                <select style="border:1px solid #613bde; font-size: 14px;" class="form-select" aria-label="Default select example">
+                                    <option selected>Agent Target</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                            <div class="mt-3">
+                                <label class="form-label">Debtors</label>
+                                <div>
+                                    <!-- <div style="background: rgba(78, 18, 255, 0.09);" class="px-4 py-1 rounded-1">
+                                        <span>0</span>
+                                    </div>
+                                    <div>
+                                        <input class="range mx-3" type="range" name "" value="200" min="0" max="500" onChange="rangeSlide(this.value)" onmousemove="rangeSlide(this.value)"></input>
+                                    </div>
+                                    <div style="background: rgba(78, 18, 255, 0.09);" class="px-4 py-1 rounded-1">
+                                        <span id="rangeValue">200</span>
+                                    </div> -->
+                                    <div class="wrapper d-flex justify-content-center" style="height: 100px;">
+                                        <div class="extra-controls form-inline">
+                                            <div class="form-group mt-4">
+                                                <input style="width:70px;text-align:center;background: linear-gradient(89.83deg, rgba(78, 44, 190, 0.18) 0.15%, rgba(163, 107, 226, 0.18) 99.04%);border-radius: 5px;" type="text" class="js-input-from form-control" maxlength="4" />
+                                            </div>
+                                        </div>
+                                        <div class="range-slider mt-1 mx-3">
+                                            <input width="10px" type="text" class="js-range-slider d-none" value="">
+                                        </div>
+                                        <hr>
+                                        <div class="extra-controls form-inline mt-4">
+                                            <div class="form-group">
+                                                <input style="width:70px;text-align:center;border-radius: 5px;border-radius: 5px;background: linear-gradient(89.83deg, rgba(78, 44, 190, 0.18) 0.15%, rgba(163, 107, 226, 0.18) 99.04%);" type="text" class="js-input-to form-control" maxlength="4" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <button class="btn butt fw-bold card-link">Assign Target</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex" id="wrapper">
+            <!-- Sidebar -->
+            <div class="box-shadow" id="sidebar-wrapper">
+                <nav id="sidebar" class="sidebar text-center bd-links">
+
+                </nav>
+            </div>
+            <!-- /#sidebar-wrapper -->
+
+
+            <!-- Page Content Holder-->
+            <div class="container-fluid" id="page-content-wrapper">
+                <div class="container p-3">
+                    <!-- Assign Target Button Row -->
+                    <div class="col-lg-12 d-flex justify-content-end pb-3">
+                        <div class="">
+                            <a href="#" class="btn btn-sm border-0 rounded-pill py-2 butt card-link text-decoration-none fw-bold"  data-bs-toggle="modal" data-bs-target="#exampleModal">Assign Target</a>
+                        </div>
+                    </div>
+
+                    <!-- Page Content -->
+                    <div class="col-lg-12 box-shadow page-box-content px-3 py-2">
+                        <!-- Header -->
+                        <div class="row d-flex align-items-center">
+                            <!-- Side Left -->
+                            <div class="col-lg-6 col-md-12 col-sm-12 d-flex align-items-center">
+                                <a href="/pages/agent-target.html" class="me-2">
+                                    <img src="/assets/img/less than.png" alt="">
+                                </a>
+                                <span class="fs-4 text-gradient">|</span>
+                                <img width="40px" src="/assets/img/opay.png" alt="" class="me-1">
+                                <h6 class="mt-2 text-gradient">Target Assignment</h6>
+                            </div>
+                            <!-- End of Side Left -->
+
+                            <!-- Side Right -->
+                            <div class="col-lg-6 col-md-12 col-sm-12 d-flex mt-lg-0 mt-md-3 mt-sm-3 align-items-center">
+                                <div style="background: rgba(78, 18, 255, 0.09);border-radius: 20px;" class="ms-lg-auto d-flex pb-2 px-3 pt-3">
+                                    <div class="pe-2">
+                                        <h6 class="fw-bold">Debtors : <span class="text-gradient">388</span></h6>
+                                    </div>
+                                    <div class="pe-2">
+                                        <h6 class="fw-bold">Agents : <span class="text-gradient">4</span></h6>
+                                    </div>
+                                    <div class="">
+                                        <h6 class="fw-bold">Unassigned Agents : <span class="text-gradient">1</span></h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End of Side Right -->
+                        </div>
+
+                        <!-- Row 1 -->
+                         <!-- Table Row -->
+                         <div class="row mt-3">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" class="fw-lighter text-light-text">Agent</th>
+                                            <th scope="col" class="fw-lighter text-light-text">Assignment Range</th>
+                                            <th scope="col" class="fw-lighter text-light-text">Assigned Debtors</th>
+                                            <th scope="col"></th>
+                                            <th scope="col"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="fw-bold">Alex Rei</td>
+                                            <td class="fw-bold">1 to 100</td>
+                                            <td class="fw-bold">100</td>
+                                            <td class="fw-bold">
+                                                <a href="#" class="text-gradient">Edit</a>
+                                            </td>
+                                            <td class="fw-bold">
+                                                <a href="/pages/agent-assign-list.html" type="button" class="btn butt fw-bold card-link py-1 px-3">View Targets</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold">Alex Rei</td>
+                                            <td class="fw-bold">1 to 100</td>
+                                            <td class="fw-bold">100</td>
+                                            <td class="fw-bold">
+                                                <a href="#" class="text-gradient">Edit</a>
+                                            </td>
+                                            <td class="fw-bold">
+                                                <button class="btn butt fw-bold card-link py-1 px-3">View Targets</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold">Alex Rei</td>
+                                            <td class="fw-bold">1 to 100</td>
+                                            <td class="fw-bold">100</td>
+                                            <td class="fw-bold">
+                                                <a href="#" class="text-gradient">Edit</a>
+                                            </td>
+                                            <td class="fw-bold">
+                                                <button class="btn butt fw-bold card-link py-1 px-3">View Targets</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+        
+
+        <!-- BOOTSTRAP JS FILE -->
+        <script src="/assets/bootstrap-5.0.2-dist/js/bootstrap.bundle.js"></script>
+        <script src="assets/bootstrap-5.2.3-dist/js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+        <!-- Jquery -->
+        <script src="/assets/js/jquery.js"></script>
+        <!-- Debt js file -->
+        <script src="/assets/js/slider.js"></script>
+        <script>
+            $('#sidebar').load('../assets/components/sidebar.html');
+
+            function rangeSlide(value) {
+                document.getElementById('rangeValue').innerHTML = value;
+            }
+        </script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Debt Recuva - Dashboard</title>
+        <!-- Font Awesome CSS File -->
+        <link rel="stylesheet" href="../assets/font-awesome-4.7.0/css/font-awesome.min.css">
+        <!-- Bootstrap CSS File -->
+        <link rel="stylesheet" href="../assets/bootstrap-5.0.2-dist/css/bootstrap.css">
+        <!-- Debt Recova -->
+        <link rel="stylesheet" href="../assets/css/debt.css">
+    </head>
+    <body>
+        <div class="d-flex" id="wrapper">
+            <!-- Sidebar -->
+            <div class="box-shadow" id="sidebar-wrapper">
+                <nav id="sidebar" class="sidebar text-center bd-links">
+                    
+                </nav>
+            </div>
+            <!-- /#sidebar-wrapper -->
+    
+            <!-- Page Content -->
+            <div class="container-fluid" id="page-content-wrapper">
+                <div class="container p-4">
+                    <!-- Page Content Holder-->
+                    <div class="col-lg-12 box-shadow page-box-content px-4 py-2">
+                        <!-- Header Row -->
+                        <div class="row d-flex align-items-center mt-2">
+                            <!-- Side Left -->
+                            <div class="col-lg-5 col-md-12 col-sm-12">
+                                <h4 class="page-title">Debt Metrics & Stats</h4>
+                            </div>
+                            <!-- End of Side Left -->
+
+                            <!-- Side Right -->
+                            <div class="col-lg-7 col-md-12 col-sm-12 d-flex mt-lg-0 mt-md-2 mt-sm-2">
+                                <div class="ms-lg-auto header-form-input select-input-holder d-flex align-items-center" style="margin-left:6px;">
+                                    <span class="sortby">Sort By : </span>
+                                    <select style="width: 70%; outline: none;" class="p-2 bg-transparent border-0 fw-bold" aria-label="Default select example">
+                                        <option selected>Newest</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                            <!-- End of Side Right -->
+                        </div>
+
+                        <!-- Row 1 -->
+                        <div class="row my-3">
+                            <!-- Chart -->
+                            <div class="col-lg-5 col-md-12 col-sm-12 d-flex justify-content-center align-items-start">
+                                <div class="row">
+                                    <img src="/assets/img/Chart.png" width="auto" alt="">
+                                </div>
+                            </div>
+                            <div class="col-lg-7 col-md-12 col-sm-12 mt-md-5 mt-sm-5 mt-lg-0">
+                                <div class="row p-2">
+                                    <div class="d-flex justify-content-between p-2">
+                                        <div class="col-lg-6">
+                                            <h6 class="fw-bold">Debts Recovered :</h6>
+                                            <h6 class="fw-bold mt-2">Value :</h6>
+                                        </div>
+                                        <div class="col-lg-6 text-end">
+                                            <h6 class=" text-muted">677 Debts</h6>
+                                            <h6 class="mt-2 text-muted">NGN 836,443,445</h6>
+                                            <a href="/pages/recovered-debt.html" class="fw-bold card-link text-decoration-none butt px-4 btn">
+                                                View Details
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr class="m-0">
+                                <div class="row p-2">
+                                    <div class="d-flex justify-content-between p-2">
+                                        <div class="col-lg-6">
+                                            <h6 class="fw-bold">Pending Debts :</h6>
+                                            <h6 class="fw-bold mt-2">Value :</h6>
+                                        </div>
+                                        <div class="col-lg-6 text-end">
+                                            <h6 class=" text-muted">216 Debts</h6>
+                                            <h6 class="mt-2 text-muted">NGN 836,443,445</h6>
+                                            <a href="/pages/pending-debt.html" class="fw-bold card-link text-decoration-none butt px-4 btn">
+                                                View Details
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr class="m-0">
+                                <div class="row p-2">
+                                    <div class="d-flex justify-content-between p-2">
+                                        <div class="col-lg-6">
+                                            <h6 class="fw-bold">Bad Debts :</h6>
+                                            <h6 class="fw-bold mt-2">Value :</h6>
+                                        </div>
+                                        <div class="col-lg-6 text-end">
+                                            <h6 class=" text-muted">11 Debts</h6>
+                                            <h6 class="mt-2 text-muted">NGN 836,443,445</h6>
+                                            <a href="/pages/bad-debt.html" class="fw-bold card-link text-decoration-none butt px-4 btn">
+                                                View Details
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="container-fluid" id="page-content-wrapper">
+                <div class="container p-5">
+                    <div style="border-radius: 40px;" class="col-lg-12 box-shadow">
+                        <div class="row p-5 pb-0">
+                            <div class="col-lg-6 d-flex align-items-center pt-3">
+                                <h4 class="fw-bold">Debt Metrics & Stats</h4>
+                            </div>
+                            <div class="col-lg-4 mt-md-3 mt-sm-3 d-flex align-items-center ms-lg-auto">
+                                <div style="background-color: #f6f9fd;" class="col py-2 px-4 rounded-pill d-flex ">
+                                    <h6 class="text-muted m-2">Sort By : </h6>
+                                    <select style="width: 70%; outline: none;" class="p-2 bg-transparent border-0 fw-bold" aria-label="Default select example">
+                                        <option selected>Last 6 Month</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                        </select>
+                                </div>
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+            </div> -->
+        </div>
+        <!-- /#page-content-wrapper -->
+        
+        <script src="/assets/JS/Jquery.min.js"></script>
+        <!-- Chart JS FILe -->
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+        <script src="https://code.highcharts.com/modules/export-data.js"></script>
+        <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+        <!-- BOOTSTRAP JS FILE -->
+        <script src="assets/bootstrap-5.2.3-dist/js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+        <!-- Jquery -->
+        <script src="/assets/js/jquery.js"></script>
+        <script>
+            $('#sidebar').load('/assets/components/sidebar.html');
+        </script>
+    </body>
+</html>

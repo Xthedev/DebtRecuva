@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Debt Recuva - Dashboard</title>
+        <!-- Font Awesome CSS File -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+        <!-- Bootstrap CSS File -->
+        <link rel="stylesheet" href="../assets/bootstrap-5.0.2-dist/css/bootstrap.css">
+        <!-- Debt Recova -->
+        <link rel="stylesheet" href="../assets/css/debt.css">
+    </head>
+    <body>
+        <div class="d-flex" id="wrapper">
+            <!-- Sidebar -->
+            <div class="box-shadow" id="sidebar-wrapper">
+                <nav id="sidebar" class="sidebar text-center bd-links">
+                    
+                </nav>
+            </div>
+            <!-- /#sidebar-wrapper -->
+    
+            <!-- Page Content Holder -->
+            <div class="container-fluid" id="page-content-wrapper">
+                <div class="container p-4">
+
+                    <!-- Page Content -->
+                    <div class="col-lg-12 box-shadow page-box-content px-5 py-4">
+                        <!-- Header Row -->
+                        <div class="row d-flex align-items-center mt-3">
+                            <!-- Side Left -->
+                            <div class="col-lg-4 col-md-12 col-sm-12 d-flex align-items-center">
+                                <a href="/pages/debt-portfolio.html" class="me-3">
+                                    <img src="/assets/img/less than.png" alt="">
+                                </a>
+                                <span class="fs-4 text-gradient me-2">|</span>
+                                <img width="40px" src="/assets/img/opay.png" alt="" class="me-1">
+                                <a href="/pages/view-debt-portfolio.html">
+                                    <h6 class="text-gradient mt-2 me-2">Opay</h6>
+                                </a>
+                                <span class="fs-4 text-gradient me-2">|</span>
+                                <h6 class="mt-2">All Debtors</h6>
+                            </div>
+                            <!-- End of Side Left -->
+
+                            <!-- Side Right -->
+                            <div class="col-lg-7 col-md-12 col-sm-12 d-flex justify ms-lg-auto mt-3">
+
+                                <div class="ms-lg-auto header-form-input search-input-holder d-flex align-items-center" style="margin-right:6px;">
+                                    <!-- <i class="fa-solid fa-search fs-5 text-light-text m-2 ms-1"></i> -->
+                                    <div>
+                                        <img src="/assets/img/search.png" alt="" width="17.82px" height="16px">
+                                    </div>
+                                    <input style="outline: none;" type="search" placeholder="Search" class="form-control bg-transparent border-0">
+                                </div>
+                                
+                                <div class="header-form-input select-input-holder d-flex align-items-center" style="margin-left:6px;">
+                                    <span class="sortby">Sort By : </span>
+                                    <select style="width: 70%; outline: none;" class="p-2 bg-transparent border-0 fw-bold" aria-label="Default select example">
+                                        <option selected>Newest</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                            <!-- End of Side Right -->
+                        </div>
+
+                        <!-- Table Row -->
+                        <div class="row mt-4">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" class="fw-bold  text-light-text">First Name</th>
+                                            <th scope="col" class="fw-bold  text-light-text">Last Name</th>
+                                            <th scope="col" class="fw-bold  text-light-text">Middle Name</th>
+                                            <th scope="col" class="fw-bold  text-light-text">Contact</th>
+                                            <th scope="col" class="fw-bold  text-light-text">Email</th>
+                                            <th scope="col" class="fw-bold  text-light-text">Location</th>
+                                            <th scope="col"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="">John</td>
+                                            <td class="">Doeelant</td>
+                                            <td class="">Dimitiri</td>
+                                            <td class="">080 455 444 5555</td>
+                                            <td class="">opay@gmail.com</td>
+                                            <td class="">Uyo</td>
+                                            <td class="">
+                                                <div class="dropdown">
+                                                    <button class="btn pt-0 pb-1 px-1" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        <img src="/assets/img/ellispe.png" alt="" width="20px">
+                                                    </button>
+                                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                        <li><a class="dropdown-item" href="/pages/edit-debtors-profile.html">Edit</a></li>
+                                                        <li><a class="dropdown-item" href="#">Delete</a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="">John</td>
+                                            <td class="">Doeelant</td>
+                                            <td class="">Dimitiri</td>
+                                            <td class="">080 455 444 5555</td>
+                                            <td class="">opay@gmail.com</td>
+                                            <td class="">Uyo</td>
+                                            <td class="">
+                                                <div class="dropdown">
+                                                    <button class="btn pt-0 pb-1 px-1" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        <img src="/assets/img/ellispe.png" alt="" width="20px">
+                                                    </button>
+                                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                        <li><a class="dropdown-item" href="/pages/edit-debtors-profile.html">Edit</a></li>
+                                                        <li><a class="dropdown-item" href="#">Delete</a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="">John</td>
+                                            <td class="">Doeelant</td>
+                                            <td class="">Dimitiri</td>
+                                            <td class="">080 455 444 5555</td>
+                                            <td class="">opay@gmail.com</td>
+                                            <td class="">Uyo</td>
+                                            <td class="">
+                                                <div class="dropdown">
+                                                    <button class="btn pt-0 pb-1 px-1" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        <img src="/assets/img/ellispe.png" alt="" width="20px">
+                                                    </button>
+                                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                        <li><a class="dropdown-item" href="/pages/edit-debtors-profile.html">Edit</a></li>
+                                                        <li><a class="dropdown-item" href="#">Delete</a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="">John</td>
+                                            <td class="">Doeelant</td>
+                                            <td class="">Dimitiri</td>
+                                            <td class="">080 455 444 5555</td>
+                                            <td class="">opay@gmail.com</td>
+                                            <td class="">Uyo</td>
+                                            <td class="">
+                                                <div class="dropdown">
+                                                    <button class="btn pt-0 pb-1 px-1" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        <img src="/assets/img/ellispe.png" alt="" width="20px">
+                                                    </button>
+                                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                        <li><a class="dropdown-item" href="/pages/edit-debtors-profile.html">Edit</a></li>
+                                                        <li><a class="dropdown-item" href="#">Delete</a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="">John</td>
+                                            <td class="">Doeelant</td>
+                                            <td class="">Dimitiri</td>
+                                            <td class="">080 455 444 5555</td>
+                                            <td class="">opay@gmail.com</td>
+                                            <td class="">Uyo</td>
+                                            <td class="">
+                                                <div class="dropdown">
+                                                    <button class="btn pt-0 pb-1 px-1" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        <img src="/assets/img/ellispe.png" alt="" width="20px">
+                                                    </button>
+                                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                        <li><a class="dropdown-item" href="/pages/edit-debtors-profile.html">Edit</a></li>
+                                                        <li><a class="dropdown-item" href="#">Delete</a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="">John</td>
+                                            <td class="">Doeelant</td>
+                                            <td class="">Dimitiri</td>
+                                            <td class="">080 455 444 5555</td>
+                                            <td class="">opay@gmail.com</td>
+                                            <td class="">Uyo</td>
+                                            <td class="">
+                                                <div class="dropdown">
+                                                    <button class="btn pt-0 pb-1 px-1" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        <img src="/assets/img/ellispe.png" alt="" width="20px">
+                                                    </button>
+                                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                        <li><a class="dropdown-item" href="/pages/edit-debtors-profile.html">Edit</a></li>
+                                                        <li><a class="dropdown-item" href="#">Delete</a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="">John</td>
+                                            <td class="">Doeelant</td>
+                                            <td class="">Dimitiri</td>
+                                            <td class="">080 455 444 5555</td>
+                                            <td class="">opay@gmail.com</td>
+                                            <td class="">Uyo</td>
+                                            <td class="">
+                                                <div class="dropdown">
+                                                    <button class="btn pt-0 pb-1 px-1" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        <img src="/assets/img/ellispe.png" alt="" width="20px">
+                                                    </button>
+                                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                        <li><a class="dropdown-item" href="/pages/edit-debtors-profile.html">Edit</a></li>
+                                                        <li><a class="dropdown-item" href="#">Delete</a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="">John</td>
+                                            <td class="">Doeelant</td>
+                                            <td class="">Dimitiri</td>
+                                            <td class="">080 455 444 5555</td>
+                                            <td class="">opay@gmail.com</td>
+                                            <td class="">Uyo</td>
+                                            <td class="">
+                                                <div class="dropdown">
+                                                    <button class="btn pt-0 pb-1 px-1" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        <img src="/assets/img/ellispe.png" alt="" width="20px">
+                                                    </button>
+                                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                        <li><a class="dropdown-item" href="/pages/edit-debtors-profile.html">Edit</a></li>
+                                                        <li><a class="dropdown-item" href="#">Delete</a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /#page-content-wrapper -->
+               
+        
+
+        <!-- BOOTSTRAP JS FILE -->
+        <script src="/assets/bootstrap-5.2.3-dist/js/bootstrap.min.js"></script>
+        <script src="/assets/bootstrap-5.0.2-dist/js/bootstrap.bundle.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+        <!-- Jquery -->
+        <script src="/assets/js/jquery.js"></script>
+        <script>
+            $('#sidebar').load('/assets/components/sidebar.html');
+
+        </script>
+    </body>
+</html>

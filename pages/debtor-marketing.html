@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Debt Recuva - Dashboard</title>
+        <!-- Font Awesome CSS File -->        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+        <!-- Bootstrap CSS File -->
+        <link rel="stylesheet" href="../assets/bootstrap-5.0.2-dist/css/bootstrap.css">
+        <!-- Debt Recova -->
+        <link rel="stylesheet" href="../assets/css/debt.css">
+    </head>
+    <body>
+        <div class="d-flex" id="wrapper">
+            <!-- Sidebar -->
+            <div class="box-shadow" id="sidebar-wrapper">
+                <nav id="sidebar" class="sidebar text-center bd-links">
+                    
+                </nav>
+            </div>
+            <!-- /#sidebar-wrapper -->
+    
+            <!-- Page Content -->
+            <div class="container-fluid" id="page-content-wrapper">
+                <div class="container p-3">
+                    <div class="col-lg-12 mb-3">
+                        <div class="row d-flex align-items-center">
+                            <div class="col-lg-6 col-md-12 col-sm-12">
+                                <div class="d-flex align-items-center">
+                                    <h6 class="page-title">Sms & Email Marketing</h6>
+                                </div>   
+                            </div>    
+                            <div class="col-lg-6 col-md-12 col-sm-12">
+                                <div class="d-flex align-items-center">
+                                    <a href="/pages/sms-templates2.html" type="button" class="btn bg-transparent text-gradient rounded-pill ms-lg-auto me-3 pt-2 px-4" style="font-size:13px;border:1px solid #4E2CBE;">Manage Templates</a>
+                                    <a href="/pages/customs-sms.html" class="card-link btn butt border-0 rounded-pill bg-gradient py-2 fw-bold">Custom Marketing</a>
+                                </div>   
+                            </div>    
+                        </div>
+                    </div>
+                    <!-- <div style="border-radius: 40px;" class="col-lg-12 box-shadow"> -->
+                        <div class="col-lg-12 box-shadow page-box-content px-3 py-2">
+                            <!-- Header Row -->
+                            <div class="row d-flex align-items-center">
+                                <!-- Side Left -->
+                                <div class="col-lg-4 col-md-12 col-sm-12 d-flex align-items-center">
+                                    <h6 class="page-title fs-6">Debtor Marketing</h6>
+                                </div>
+                                <!-- End of Side Left -->
+    
+                                <!-- Side Right -->
+                                <div class="col-lg-7 col-md-12 col-sm-12 d-flex justify ms-lg-auto">
+    
+                                    <div class="ms-lg-auto header-form-input search-input-holder d-flex align-items-center" style="margin-right:6px;">
+                                        <!-- <i class="fa-solid fa-search fs-5 text-light-text m-2 ms-1"></i> -->
+                                        <div>
+                                            <img src="/assets/img/search.png" alt="" width="17.82px" height="16px">
+                                        </div>
+                                        <input style="outline: none;" type="search" placeholder="Search" class="form-control bg-transparent border-0">
+                                    </div>
+                                    
+                                    <div class="header-form-input select-input-holder d-flex align-items-center" style="margin-left:6px;">
+                                        <span class="sortby">Sort By : </span>
+                                        <select style="width: 70%; outline: none;" class="p-2 bg-transparent border-0 fw-bold" aria-label="Default select example">
+                                            <option selected>Year</option>
+                                            <option value="1">Month</option>
+                                            <option value="2">Week</option>
+                                            <option value="3">Day</option>
+                                        </select>
+                                    </div>
+    
+                                </div>
+                                <!-- End of Side Right -->
+                            </div>
+    
+                            <!-- Row 1 -->
+                             <!-- Table Start here -->
+                             <div class="row mt-3">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <td scope="col" class="fw-lighter text-muted"></td>
+                                                <td scope="col" class="fw-lighter text-muted">First Name</td>
+                                                <td scope="col" class="fw-lighter text-muted">Last Name</td>
+                                                <td scope="col" class="fw-lighter text-muted">Contact</td>
+                                                <td scope="col" class="fw-lighter text-muted">Email</td>
+                                                <td scope="col" class="fw-lighter text-muted">Paid</td>
+                                                <td scope="col" class="fw-lighter text-muted">Balance</td>
+                                                <td scope="col" class="fw-lighter text-muted"></td>
+                                                    
+                                            </tr>
+                                       </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td><input style="border:1px solid #4E2CBE;box-shadow: 0px 0px 5px 0px #9677f9ab;" type="checkbox" class="form-check-input" id="exampleCheck1"></td>
+                                                <td class="fw-bold">John</td>
+                                                <td class="fw-bold">Doeellant</td>
+                                                <td class="fw-bold">0804554445555</td>
+                                                <td class="fw-bold">Opay@gmail.com</td>
+                                                <td class="fw-bold">N 50,555</td>
+                                                <td class="fw-bold">N 477,448</td>
+                                                <td class="fw-bold">
+                                                    <div class="dropdown">
+                                                        <button class="btn pt-0 pb-1 px-1" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <img src="/assets/img/ellispe.png" alt="" width="20px">
+                                                        </button>
+                                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                            <li><a class="dropdown-item" href="#">View</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><input style="border:1px solid #4E2CBE;box-shadow: 0px 0px 5px 0px #9677f9ab;" type="checkbox" class="form-check-input" id="exampleCheck1"></td>
+                                                <td class="fw-bold">John</td>
+                                                <td class="fw-bold">Doeellant</td>
+                                                <td class="fw-bold">0804554445555</td>
+                                                <td class="fw-bold">Opay@gmail.com</td>
+                                                <td class="fw-bold">N 50,555</td>
+                                                <td class="fw-bold">N 477,448</td>
+                                                <td class="fw-bold">
+                                                    <div class="dropdown">
+                                                        <button class="btn pt-0 pb-1 px-1" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <img src="/assets/img/ellispe.png" alt="" width="20px">
+                                                        </button>
+                                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                            <li><a class="dropdown-item" href="#">View</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><input style="border:1px solid #4E2CBE;box-shadow: 0px 0px 5px 0px #9677f9ab;" type="checkbox" class="form-check-input" id="exampleCheck1"></td>
+                                                <td class="fw-bold">John</td>
+                                                <td class="fw-bold">Doeellant</td>
+                                                <td class="fw-bold">0804554445555</td>
+                                                <td class="fw-bold">Opay@gmail.com</td>
+                                                <td class="fw-bold">N 50,555</td>
+                                                <td class="fw-bold">N 477,448</td>
+                                                <td class="fw-bold">
+                                                    <div class="dropdown">
+                                                        <button class="btn pt-0 pb-1 px-1" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <img src="/assets/img/ellispe.png" alt="" width="20px">
+                                                        </button>
+                                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                            <li><a class="dropdown-item" href="#">View</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><input style="border:1px solid #4E2CBE;box-shadow: 0px 0px 5px 0px #9677f9ab;" type="checkbox" class="form-check-input" id="exampleCheck1"></td>
+                                                <td class="fw-bold">John</td>
+                                                <td class="fw-bold">Doeellant</td>
+                                                <td class="fw-bold">0804554445555</td>
+                                                <td class="fw-bold">Opay@gmail.com</td>
+                                                <td class="fw-bold">N 50,555</td>
+                                                <td class="fw-bold">N 477,448</td>
+                                                <td class="fw-bold">
+                                                    <div class="dropdown">
+                                                        <button class="btn pt-0 pb-1 px-1" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <img src="/assets/img/ellispe.png" alt="" width="20px">
+                                                        </button>
+                                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                            <li><a class="dropdown-item" href="#">View</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><input style="border:1px solid #4E2CBE;box-shadow: 0px 0px 5px 0px #9677f9ab;" type="checkbox" class="form-check-input" id="exampleCheck1"></td>
+                                                <td class="fw-bold">John</td>
+                                                <td class="fw-bold">Doeellant</td>
+                                                <td class="fw-bold">0804554445555</td>
+                                                <td class="fw-bold">Opay@gmail.com</td>
+                                                <td class="fw-bold">N 50,555</td>
+                                                <td class="fw-bold">N 477,448</td>
+                                                <td class="fw-bold">
+                                                    <div class="dropdown">
+                                                        <button class="btn pt-0 pb-1 px-1" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <img src="/assets/img/ellispe.png" alt="" width="20px">
+                                                        </button>
+                                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                            <li><a class="dropdown-item" href="#">View</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><input style="border:1px solid #4E2CBE;box-shadow: 0px 0px 5px 0px #9677f9ab;" type="checkbox" class="form-check-input" id="exampleCheck1"></td>
+                                                <td class="fw-bold">John</td>
+                                                <td class="fw-bold">Doeellant</td>
+                                                <td class="fw-bold">0804554445555</td>
+                                                <td class="fw-bold">Opay@gmail.com</td>
+                                                <td class="fw-bold">N 50,555</td>
+                                                <td class="fw-bold">N 477,448</td>
+                                                <td class="fw-bold">
+                                                    <div class="dropdown">
+                                                        <button class="btn pt-0 pb-1 px-1" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <img src="/assets/img/ellispe.png" alt="" width="20px">
+                                                        </button>
+                                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                            <li><a class="dropdown-item" href="#">View</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><input style="border:1px solid #4E2CBE;box-shadow: 0px 0px 5px 0px #9677f9ab;" type="checkbox" class="form-check-input" id="exampleCheck1"></td>
+                                                <td class="fw-bold">John</td>
+                                                <td class="fw-bold">Doeellant</td>
+                                                <td class="fw-bold">0804554445555</td>
+                                                <td class="fw-bold">Opay@gmail.com</td>
+                                                <td class="fw-bold">N 50,555</td>
+                                                <td class="fw-bold">N 477,448</td>
+                                                <td class="fw-bold">
+                                                    <div class="dropdown">
+                                                        <button class="btn pt-0 pb-1 px-1" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <img src="/assets/img/ellispe.png" alt="" width="20px">
+                                                        </button>
+                                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                            <li><a class="dropdown-item" href="#">View</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                            <div class="row mt-2 px-3">
+                                                <!-- Pagination -->
+                                                <div class="col-lg-12 d-flex align-items-center">
+                                                     <!-- select button -->
+                                                    <div class="form-check py-2 px-3 d-flex" style="background: linear-gradient(89.83deg, rgba(78, 44, 190, 0.18) 0.15%, rgba(163, 107, 226, 0.18) 99.04%);border-radius: 18px;">
+                                                        <div class="ps-3 ">
+                                                            <input type="checkbox" style="border:1px solid #4E2CBE;box-shadow: 0px 0px 5px 0px #9677f9ab;" class="form-check-input" id="exampleCheck1">
+                                                        </div>
+                                                        <div>
+                                                            <label class="form-check-label" for="exampleCheck1">Select all</label>
+                                                        </div>
+                                                    </div>
+                                                    <!--select button  -->
+                                                    <div class="ms-lg-auto">
+                                                        <nav aria-label="Page navigation example">
+                                                            <ul class="pagination mt-3">
+                                                                <li class="page-item mx-2">
+                                                                    <a class="page-link rounded-2 bg-light border-0" href="#" aria-label="Previous">
+                                                                        <i class="fa-solid fa-less-than text-dark fw-bold"></i>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="page-item mx-2">
+                                                                    <a class="page-link rounded-2 text-white fw-bold active bg-light border-0" href="#">1</a>
+                                                                </li>
+                                                                <li class="page-item mx-2 ">
+                                                                    <a class="page-link rounded-2 text-dark fw-bold bg-light border-0" href="#">2</a>
+                                                                </li>
+                                                                <li class="page-item mx-2">
+                                                                    <a class="page-link rounded-2 text-dark fw-bold bg-light border-0" href="#">3</a>
+                                                                </li>
+                                                                <li class="page-item mx-2">
+                                                                    <a class="page-link rounded-2 text-dark fw-bold bg-light border-0" href="#">4</a>
+                                                                </li>
+                                                                <li class="page-item mx-2">
+                                                                    <a class="page-link rounded-2 bg-light border-0" href="#" aria-label="Next">
+                                                                        <i class="fa-solid fa-greater-than text-dark fw-bold"></i>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </nav>
+                                                    </div>
+                                                </div>
+                                                <!-- Pagination end -->
+                                            </div>
+                                             <!-- Proceed Button -->
+                                            <div class="row px-4 mb-3">
+                                                <div class="col-lg-12 d-flex justify-content-end">
+                                                    <a href="/pages/sms-marketing.html" class="card-link text-decoration-none mt-3 butt btn fw-bold">
+                                                        Proceed
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <!-- Proceed button -->
+                                        </div>
+                                </div>
+                                
+                    </div>
+                </div>
+            </div>
+            
+
+        <!-- /#page-content-wrapper -->
+
+        <!-- BOOTSTRAP JS FILE -->
+        <script src="../assets/bootstrap-5.2.3-dist/js/bootstrap.min.js"></script>
+        <script src="../assets/bootstrap-5.0.2-dist/js/bootstrap.bundle.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+        <!-- Jquery -->
+        <script src="/assets/js/jquery.js"></script>
+        <script>
+            $('#sidebar').load('/assets/components/sidebar.html');
+        </script>
+    </body>
+</html>
+
+
+

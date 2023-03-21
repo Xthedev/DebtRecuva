@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Debt Recuva - Dashboard</title>
+        <!-- Font Awesome CSS File -->        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+        <!-- Bootstrap CSS File -->
+        <link rel="stylesheet" href="../assets/bootstrap-5.0.2-dist/css/bootstrap.css">
+        <!-- Debt Recova -->
+        <link rel="stylesheet" href="../assets/css/debt.css">
+    </head>
+    <body>
+        <div class="d-flex" id="wrapper">
+            <!-- Sidebar -->
+            <div class="box-shadow" id="sidebar-wrapper">
+                <nav id="sidebar" class="sidebar text-center bd-links">
+                  
+                </nav>
+            </div>
+            <!-- /#sidebar-wrapper -->
+    
+            <!-- Page Content -->
+            
+            <div class="container-fluid" id="page-content-wrapper">
+                <div class="container p-3" >
+                    <div class="box-shadow px-3 py-2" style="border-radius: 20px;">
+                        <div class="row">
+                            <div class="col-lg-5 col-md-12 col-sm-12 d-flex align-items-center">
+                                <a href="/pages/debts-metric.html">
+                                    <img src="/assets/img/less than.png" alt="">
+                                </a>
+                                <span class="text-gradient fs-4 mx-2">|</span>
+                                <img width="40px" src="/assets/img/opay.png" alt="">
+                                <span class="mt-1 ms-1">Opay</span>
+                            </div>
+                            <!-- End of Side Left -->
+
+                            <!-- Side Right -->
+                            <div class="col-lg-7 col-md-12 col-sm-12 d-flex mt-lg-0 mt-md-2 mt-sm-2">
+
+                                <div class="ms-lg-auto header-form-input search-input-holder d-flex align-items-center">
+                                    <!-- <i class="fa-solid fa-search fs-5 text-light-text m-2 ms-1"></i> -->
+                                    <div>
+                                        <img src="/assets/img/search.png" alt="" width="17.82px" height="16px">
+                                    </div>
+                                    <input style="outline: none;" type="search" placeholder="Search" class="form-control bg-transparent border-0">
+                                </div>
+                                
+                                <div class="header-form-input select-input-holder d-flex align-items-center" style="margin-left:6px;">
+                                    <span class="sortby">Sort By : </span>
+                                    <select style="width: 70%; outline: none;" class="p-2 bg-transparent border-0 fw-bold" aria-label="Default select example">
+                                        <option selected>Newest</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- Calls -->
+                        <div class="row row-cols-lg-4 row-cols-md-2 row-cols-sm-2 mt-1 g-3">
+                            <div class="col">
+                                <div style="border:1px solid #8756D6; border-radius:10px;" class="p-3">
+                                    <div class="">
+                                        <p class="mb-1">Recovery Debts</p>
+                                        <h6 class="m-0">677</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div style="border:1px solid #8756D6; border-radius:10px;" class="p-3">
+                                    <div class="">
+                                        <p class="mb-1">Amount Recovered</p>
+                                        <h6 class="m-0">NGN836,443,445</h6>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div style="border:1px solid #8756D6; border-radius:10px;" class="p-3">
+                                    <div class="">
+                                        <p class="mb-1">Unrecovered Debts</p>
+                                        <h6 class="m-0">677</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div style="border:1px solid #8756D6; border-radius:10px;" class="p-3">
+                                    <div class="">
+                                        <p class="mb-1">Unrecovered Amount</p>
+                                        <h6 class="m-0">677</h6>
+                                    </div>
+                                </div>
+                            </div>
+                           
+                        </div>
+                            <!-- Table row -->
+                        <div class="row mt-3">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <td scope="col" class="fw-bold text-muted">First Name</td>
+                                            <td scope="col" class="fw-bold text-muted">Last Name</td>
+                                            <td scope="col" class="fw-bold text-muted">Contact</td>
+                                            <td scope="col" class="fw-bold text-muted">Agent</td>
+                                            <td scope="col" class="fw-bold text-muted">Amount Recovered</td>
+                                            <td scope="col" class="fw-bold text-muted">Unrecovered Amount</td>
+                                            <td scope="col" class="fw-bold text-muted"></td>        
+                                        </tr>
+                                   </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="">John</td>
+                                            <td class="">Doeellant</td>
+                                            <td class="">0804554445555</td>
+                                            <td class="">Alexx Rei</td>
+                                            <td class="">N 50,555</td>
+                                            <td class="">N 477,448</td>
+                                            <td class="">
+                                                <div class="dropdown">
+                                                    <button class="btn pt-0 pb-1 px-1" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        <img src="/assets/img/ellispe.png" alt="" width="20px">
+                                                    </button>
+                                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                        <li><a class="dropdown-item" href="#">View</a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="">John</td>
+                                            <td class="">Doeellant</td>
+                                            <td class="">0804554445555</td>
+                                            <td class="">Alexx Rei</td>
+                                            <td class="">N 50,555</td>
+                                            <td class="">N 477,448</td>
+                                            <td class="">
+                                                <div class="dropdown">
+                                                    <button class="btn pt-0 pb-1 px-1" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        <img src="/assets/img/ellispe.png" alt="" width="20px">
+                                                    </button>
+                                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                        <li><a class="dropdown-item" href="#">View</a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="">John</td>
+                                            <td class="">Doeellant</td>
+                                            <td class="">0804554445555</td>
+                                            <td class="">Alexx Rei</td>
+                                            <td class="">N 50,555</td>
+                                            <td class="">N 477,448</td>
+                                            <td class="">
+                                                <div class="dropdown">
+                                                    <button class="btn pt-0 pb-1 px-1" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        <img src="/assets/img/ellispe.png" alt="" width="20px">
+                                                    </button>
+                                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                        <li><a class="dropdown-item" href="#">View</a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="">John</td>
+                                            <td class="">Doeellant</td>
+                                            <td class="">0804554445555</td>
+                                            <td class="">Alexx Rei</td>
+                                            <td class="">N 50,555</td>
+                                            <td class="">N 477,448</td>
+                                            <td class="">
+                                                <div class="dropdown">
+                                                    <button class="btn pt-0 pb-1 px-1" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        <img src="/assets/img/ellispe.png" alt="" width="20px">
+                                                    </button>
+                                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                        <li><a class="dropdown-item" href="#">View</a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="">John</td>
+                                            <td class="">Doeellant</td>
+                                            <td class="">0804554445555</td>
+                                            <td class="">Alexx Rei</td>
+                                            <td class="">N 50,555</td>
+                                            <td class="">N 477,448</td>
+                                            <td class="">
+                                                <div class="dropdown">
+                                                    <button class="btn pt-0 pb-1 px-1" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        <img src="/assets/img/ellispe.png" alt="" width="20px">
+                                                    </button>
+                                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                        <li><a class="dropdown-item" href="#">View</a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="">John</td>
+                                            <td class="">Doeellant</td>
+                                            <td class="">0804554445555</td>
+                                            <td class="">Alexx Rei</td>
+                                            <td class="">N 50,555</td>
+                                            <td class="">N 477,448</td>
+                                            <td class="">
+                                                <div class="dropdown">
+                                                    <button class="btn pt-0 pb-1 px-1" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        <img src="/assets/img/ellispe.png" alt="" width="20px">
+                                                    </button>
+                                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                        <li><a class="dropdown-item" href="#">View</a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="">John</td>
+                                            <td class="">Doeellant</td>
+                                            <td class="">0804554445555</td>
+                                            <td class="">Alexx Rei</td>
+                                            <td class="">N 50,555</td>
+                                            <td class="">N 477,448</td>
+                                            <td class="">
+                                                <div class="dropdown">
+                                                    <button class="btn pt-0 pb-1 px-1" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        <img src="/assets/img/ellispe.png" alt="" width="20px">
+                                                    </button>
+                                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                        <li><a class="dropdown-item" href="#">View</a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="row">
+                                    <!-- Pagination -->
+                                    <div class="col-lg-12 d-flex">
+                                        <div class="ms-auto">
+                                            <nav aria-label="Page navigation example">
+                                                <ul class="pagination mt-2">
+                                                    <li class="page-item mx-2">
+                                                        <a class="page-link rounded-2 bg-light border-0" href="#" aria-label="Previous">
+                                                            <i class="fa-solid fa-less-than text-dark fw-bold"></i>
+                                                        </a>
+                                                    </li>
+                                                    <li class="page-item mx-2">
+                                                        <a class="page-link rounded-2 text-white fw-bold active bg-light border-0" href="#">1</a>
+                                                    </li>
+                                                    <li class="page-item mx-2 ">
+                                                        <a class="page-link rounded-2 text-dark fw-bold bg-light border-0" href="#">2</a>
+                                                    </li>
+                                                    <li class="page-item mx-2">
+                                                        <a class="page-link rounded-2 text-dark fw-bold bg-light border-0" href="#">3</a>
+                                                    </li>
+                                                    <li class="page-item mx-2">
+                                                        <a class="page-link rounded-2 text-dark fw-bold bg-light border-0" href="#">4</a>
+                                                    </li>
+                                                    <li class="page-item mx-2">
+                                                        <a class="page-link rounded-2 bg-light border-0" href="#" aria-label="Next">
+                                                            <i class="fa-solid fa-greater-than text-dark fw-bold"></i>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </nav>
+                                        </div>
+                                    </div>
+                                    <!-- Pagination end -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <!-- /#page-content-wrapper -->
+        
+        <!-- BOOTSTRAP JS FILE -->
+        <script src="../assets/bootstrap-5.2.3-dist/js/bootstrap.min.js"></script>
+        <script src="../assets/bootstrap-5.0.2-dist/js/bootstrap.bundle.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+        <!-- Jquery -->
+        <script src="/assets/js/jquery.js"></script>
+        <script>
+            $('#sidebar').load('/assets/components/sidebar.html');
+        </script>
+    </body>
+</html>

@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Debt Recuva - Dashboard</title>
+        <!-- Font Awesome CSS File -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+        <!-- Bootstrap CSS File -->
+        <link rel="stylesheet" href="../assets/bootstrap-5.0.2-dist/css/bootstrap.css">
+        <!-- Debt Recova -->
+        <link rel="stylesheet" href="../assets/css/debt.css">
+    </head>
+    <body>
+        <div class="d-flex" id="wrapper">
+            <!-- Sidebar -->
+            <div class="box-shadow" id="sidebar-wrapper">
+                <nav id="sidebar" class="sidebar text-center bd-links">
+                   
+                </nav>
+            </div>
+            <!-- /#sidebar-wrapper -->
+    
+            <!-- Page Content -->
+            <div class="container-fluid" id="page-content-wrapper">
+                <div class="container p-4">
+                    <!-- Page Content -->
+                    <div class="col-lg-12 box-shadow page-box-content px-4 py-3">
+                        <!-- Header Row -->
+                        <div class="row">
+                            <!-- Side Left -->
+                            <div class="col-lg-5 col-md-12 col-sm-12 d-flex align-items-center">
+                                <a href="/pages/debt-metrics.html">
+                                    <img src="/assets/img/less than.png" alt="">
+                                </a>
+                                <span class="text-gradient fs-4 ms-2">|</span>
+                                <h5 class="mt-2 ms-2">Recovered Debts</h5>
+                            </div>
+                            <!-- End of Side Left -->
+
+                            <!-- Side Right -->
+                            <div class="col-lg-7 col-md-12 col-sm-12 d-flex  mt-md-2">
+
+                                <div class="ms-lg-auto header-form-input search-input-holder d-flex align-items-center">
+                                    <!-- <i class="fa-solid fa-search fs-5 text-light-text m-2 ms-1"></i> -->
+                                    <div>
+                                        <img src="/assets/img/search.png" alt="" width="17.82px" height="16px">
+                                    </div>
+                                    <input style="outline: none;" type="search" placeholder="Search" class="form-control bg-transparent border-0">
+                                </div>
+                                
+                                <div class="header-form-input select-input-holder d-flex align-items-center" style="margin-left:6px;">
+                                    <span class="sortby">Sort By : </span>
+                                    <select style="width: 70%; outline: none;" class="p-2 bg-transparent border-0 fw-bold" aria-label="Default select example">
+                                        <option selected>Newest</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                            <!-- End of Side Right -->
+                        </div>
+
+                        <!-- Table Row -->
+                        <div class="row mt-3">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" class="fw-bold  text-light-text">Company Name</th>
+                                            <th scope="col" class="fw-bold  text-light-text">Recovered Name</th>
+                                            <th scope="col" class="fw-bold  text-light-text">Amount</th>
+                                            <th scope="col" class="fw-bold  text-light-text">Agents</th>
+                                            <th style="min-width: 0px;" scope="col"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="fw-bold">Opay</td>
+                                            <td class="fw-bold">22</td>
+                                            <td class="fw-bold">NGN 2,443,454</td>
+                                            <td class="fw-bold">Agents</td>
+                                            <td class="">
+                                                <div class="dropdown">
+                                                    <button class="btn pt-0 pb-1 px-1" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        <img src="/assets/img/ellispe.png" alt="" width="20px">
+                                                    </button>
+                                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                        <li><a class="dropdown-item" href="#">Edit</a></li>
+                                                        <li><a class="dropdown-item" href="#">Delete</a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold">Opay</td>
+                                            <td class="fw-bold">22</td>
+                                            <td class="fw-bold">NGN 2,443,454</td>
+                                            <td class="fw-bold">Agents</td>
+                                            <td class="">
+                                                <div class="dropdown">
+                                                    <button class="btn pt-0 pb-1 px-1" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        <img src="/assets/img/ellispe.png" alt="" width="20px">
+                                                    </button>
+                                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                        <li><a class="dropdown-item" href="#">Edit</a></li>
+                                                        <li><a class="dropdown-item" href="#">Delete</a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold">Opay</td>
+                                            <td class="fw-bold">22</td>
+                                            <td class="fw-bold">NGN 2,443,454</td>
+                                            <td class="fw-bold">Agents</td>
+                                            <td class="">
+                                                <div class="dropdown">
+                                                    <button class="btn pt-0 pb-1 px-1" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        <img src="/assets/img/ellispe.png" alt="" width="20px">
+                                                    </button>
+                                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                        <li><a class="dropdown-item" href="#">Edit</a></li>
+                                                        <li><a class="dropdown-item" href="#">Delete</a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold">Opay</td>
+                                            <td class="fw-bold">22</td>
+                                            <td class="fw-bold">NGN 2,443,454</td>
+                                            <td class="fw-bold">Agents</td>
+                                            <td class="">
+                                                <div class="dropdown">
+                                                    <button class="btn pt-0 pb-1 px-1" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        <img src="/assets/img/ellispe.png" alt="" width="20px">
+                                                    </button>
+                                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                        <li><a class="dropdown-item" href="#">Edit</a></li>
+                                                        <li><a class="dropdown-item" href="#">Delete</a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold">Opay</td>
+                                            <td class="fw-bold">22</td>
+                                            <td class="fw-bold">NGN 2,443,454</td>
+                                            <td class="fw-bold">Agents</td>
+                                            <td class="">
+                                                <div class="dropdown">
+                                                    <button class="btn pt-0 pb-1 px-1" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                        <img src="/assets/img/ellispe.png" alt="" width="20px">
+                                                    </button>
+                                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                        <li><a class="dropdown-item" href="#">Edit</a></li>
+                                                        <li><a class="dropdown-item" href="#">Delete</a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- Navigation Row -->
+                        <div class="row mt-3">
+                            <div class="col-lg-12 d-flex align-items-center">
+                                <div class="ms-auto">
+                                    <nav aria-label="Page navigation example">
+                                        <ul class="pagination">
+                                            <li class=" me-4 ">
+                                                <a class="page-link rounded-2 bg-light border-0" href="#" aria-label="Previous">
+                                                    <i class="fa fa-less-than text-dark fw-bold"></i>
+                                                </a>
+                                            </li>
+                                            <li class="page-item me-4">
+                                                <a class="page-link rounded-2 text-white fw-bold active bg-light border-0" href="#">1</a>
+                                            </li>
+                                            <li class="page-item me-4">
+                                                <a class="page-link rounded-2 text-dark fw-bold bg-light border-0" href="#">2</a>
+                                            </li>
+                                            <li class="page-item me-4">
+                                                <a class="page-link rounded-2 text-dark fw-bold bg-light border-0" href="#">3</a>
+                                            </li>
+                                            <li class="page-item me-4">
+                                                <a class="page-link rounded-2 text-dark fw-bold bg-light border-0" href="#">4</a>
+                                            </li>
+                                            <li class="page-item">
+                                                <a class="page-link rounded-2 bg-light border-0" href="#" aria-label="Next">
+                                                    <i class="fa fa-greater-than text-dark fw-bold"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </nav>  
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="container-fluid" id="page-content-wrapper">
+                <div class="container p-5">
+                    <div style="border-radius: 40px;" class="col-lg-12 box-shadow">
+                        <div class="row p-5 pb-0">
+                            <div class="col-lg-4 d-flex align-items-center pt-3">
+                                <a href="/pages/debt-metrics.html" class="text-decoration-none">
+                                    <i class="fa-solid fa-less-than fs-2 text-gradient fw-bold mt-2 me-3"></i>
+                                </a>
+                                <span class="fs-2 text-gradient me-3">|</span>
+                                <h5 class="mt-2">Recovered Debt</h5>
+                            </div>
+                            <div class="col-lg-4 col-md-12 mt-md-3 mt-sm-3 d-flex align-items-center ms-lg-auto">
+                                <div style="background-color: #f6f9fd; width: 100%;" class="py-2 px-4 rounded-pill d-flex ">
+                                    <div>
+                                        <img src="/assets/img/search.png" alt="" width="35px">
+                                    </div>
+                                    <input type="search" placeholder="Search" class="form-control bg-transparent border-0">
+                                </div>
+                            </div>
+                            <div class="col-lg-4 mt-md-3 mt-sm-3 d-flex align-items-center">
+                                <div style="background-color: #f6f9fd;" class="col py-2 px-4 rounded-pill d-flex ms-lg-auto">
+                                    <h6 class="text-muted m-2">Sort By : </h6>
+                                    <select style="width: 70%;" class="p-2 bg-transparent border-0 fw-bold" aria-label="Default select example">
+                                        <option selected>Months</option>
+                                        <option value="1">Years</option>
+                                        <option value="2">Weeks</option>
+                                        <option value="3">Days</option>
+                                        </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row p-5">
+                            <div class="table-responsive">
+                                <table class="table-borderless sub-history">
+                                    <tbody class="scrollable">
+                                        <thead>
+                                            <tr>
+                                                <td scope="col" class="fw-bold text-muted">Company Name</td>
+                                                <td scope="col" class="fw-bold text-muted">Recovered Debt</td>
+                                                <td scope="col" class="fw-bold text-muted">Amount</td>
+                                                <td scope="col" class="fw-bold text-muted">Agents</td>
+                                                <td scope="col" class="fw-bold text-muted"></td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="fw-bold">Opay</td>
+                                                <td class="fw-bold">22</td>
+                                                <td class="fw-bold">NGN 714,334</td>
+                                                <td class="fw-bold">6</td>
+                                                <td class="fw-bold">
+                                                    <div class="dropdown">
+                                                        <button class="btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <img src="/assets/img/ellispe.png" alt="" width="20px">
+                                                        </button>
+                                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                            <li><a class="dropdown-item" href="#">Edit</a></li>
+                                                            <li><a class="dropdown-item" href="#">Delete</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="fw-bold">Opay</td>
+                                                <td class="fw-bold">22</td>
+                                                <td class="fw-bold">NGN 714,334</td>
+                                                <td class="fw-bold">6</td>
+                                                <td class="fw-bold">
+                                                    <div class="dropdown">
+                                                        <button class="btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <img src="/assets/img/ellispe.png" alt="" width="20px">
+                                                        </button>
+                                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                            <li><a class="dropdown-item" href="#">Edit</a></li>
+                                                            <li><a class="dropdown-item" href="#">Delete</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="fw-bold">Opay</td>
+                                                <td class="fw-bold">22</td>
+                                                <td class="fw-bold">NGN 714,334</td>
+                                                <td class="fw-bold">6</td>
+                                                <td class="fw-bold">
+                                                    <div class="dropdown">
+                                                        <button class="btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <img src="/assets/img/ellispe.png" alt="" width="20px">
+                                                        </button>
+                                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                            <li><a class="dropdown-item" href="#">Edit</a></li>
+                                                            <li><a class="dropdown-item" href="#">Delete</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="fw-bold">Opay</td>
+                                                <td class="fw-bold">22</td>
+                                                <td class="fw-bold">NGN 714,334</td>
+                                                <td class="fw-bold">6</td>
+                                                <td class="fw-bold">
+                                                    <div class="dropdown">
+                                                        <button class="btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <img src="/assets/img/ellispe.png" alt="" width="20px">
+                                                        </button>
+                                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                            <li><a class="dropdown-item" href="#">Edit</a></li>
+                                                            <li><a class="dropdown-item" href="#">Delete</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="fw-bold">Opay</td>
+                                                <td class="fw-bold">22</td>
+                                                <td class="fw-bold">NGN 714,334</td>
+                                                <td class="fw-bold">6</td>
+                                                <td class="fw-bold">
+                                                    <div class="dropdown">
+                                                        <button class="btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <img src="/assets/img/ellispe.png" alt="" width="20px">
+                                                        </button>
+                                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                            <li><a class="dropdown-item" href="#">Edit</a></li>
+                                                            <li><a class="dropdown-item" href="#">Delete</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="fw-bold">Opay</td>
+                                                <td class="fw-bold">22</td>
+                                                <td class="fw-bold">NGN 714,334</td>
+                                                <td class="fw-bold">6</td>
+                                                <td class="fw-bold">
+                                                    <div class="dropdown">
+                                                        <button class="btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <img src="/assets/img/ellispe.png" alt="" width="20px">
+                                                        </button>
+                                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                            <li><a class="dropdown-item" href="#">Edit</a></li>
+                                                            <li><a class="dropdown-item" href="#">Delete</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="fw-bold">Opay</td>
+                                                <td class="fw-bold">22</td>
+                                                <td class="fw-bold">NGN 714,334</td>
+                                                <td class="fw-bold">6</td>
+                                                <td class="fw-bold">
+                                                    <div class="dropdown">
+                                                        <button class="btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <img src="/assets/img/ellispe.png" alt="" width="20px">
+                                                        </button>
+                                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                            <li><a class="dropdown-item" href="#">Edit</a></li>
+                                                            <li><a class="dropdown-item" href="#">Delete</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="fw-bold">Opay</td>
+                                                <td class="fw-bold">22</td>
+                                                <td class="fw-bold">NGN 714,334</td>
+                                                <td class="fw-bold">6</td>
+                                                <td class="fw-bold">
+                                                    <div class="dropdown">
+                                                        <button class="btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <img src="/assets/img/ellispe.png" alt="" width="20px">
+                                                        </button>
+                                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                            <li><a class="dropdown-item" href="#">Edit</a></li>
+                                                            <li><a class="dropdown-item" href="#">Delete</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="fw-bold">Opay</td>
+                                                <td class="fw-bold">22</td>
+                                                <td class="fw-bold">NGN 714,334</td>
+                                                <td class="fw-bold">6</td>
+                                                <td class="fw-bold">
+                                                    <div class="dropdown">
+                                                        <button class="btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <img src="/assets/img/ellispe.png" alt="" width="20px">
+                                                        </button>
+                                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                            <li><a class="dropdown-item" href="#">Edit</a></li>
+                                                            <li><a class="dropdown-item" href="#">Delete</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="fw-bold">Opay</td>
+                                                <td class="fw-bold">22</td>
+                                                <td class="fw-bold">NGN 714,334</td>
+                                                <td class="fw-bold">6</td>
+                                                <td class="fw-bold">
+                                                    <div class="dropdown">
+                                                        <button class="btn" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <img src="/assets/img/ellispe.png" alt="" width="20px">
+                                                        </button>
+                                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                            <li><a class="dropdown-item" href="#">Edit</a></li>
+                                                            <li><a class="dropdown-item" href="#">Delete</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="row p-5">
+                            <div class="col-lg-12 d-flex align-items-center">
+                                <div class="ms-lg-auto">
+                                <nav aria-label="Page navigation example">
+                                    <ul class="pagination">
+                                        <li class=" me-4 ">
+                                            <a class="page-link rounded-2 bg-light border-0" href="#" aria-label="Previous">
+                                                <i class="fa fa-less-than text-dark fw-bold"></i>
+                                            </a>
+                                        </li>
+                                        <li class="page-item me-4">
+                                            <a class="page-link rounded-2 text-white fw-bold active bg-light border-0" href="#">1</a>
+                                        </li>
+                                        <li class="page-item me-4">
+                                            <a class="page-link rounded-2 text-dark fw-bold bg-light border-0" href="#">2</a>
+                                        </li>
+                                        <li class="page-item me-4">
+                                            <a class="page-link rounded-2 text-dark fw-bold bg-light border-0" href="#">3</a>
+                                        </li>
+                                        <li class="page-item me-4">
+                                            <a class="page-link rounded-2 bg-light border-0" href="#" aria-label="Next">
+                                                <i class="fa fa-greater-than text-dark fw-bold"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+        <!-- /#page-content-wrapper -->
+        
+        <script src="/assets/JS/Jquery.min.js"></script>
+        <!-- Chart JS FILe -->
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+        <script src="https://code.highcharts.com/modules/export-data.js"></script>
+        <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+        <!-- BOOTSTRAP JS FILE -->
+        <script src="assets/bootstrap-5.2.3-dist/js/bootstrap.min.js"></script>
+        <script src="/assets/bootstrap-5.0.2-dist/js/bootstrap.bundle.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+        <!-- Jquery -->
+        <script src="/assets/js/jquery.js"></script>
+        <script>
+            $('#sidebar').load('../assets/components/sidebar.html');
+        </script>
+    </body>
+</html>

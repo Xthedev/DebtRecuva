@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Debt Recuva - Dashboard</title>
+        <!-- Font Awesome CSS File -->        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+        <!-- Bootstrap CSS File -->
+        <link rel="stylesheet" href="../assets/bootstrap-5.0.2-dist/css/bootstrap.css">
+        <!-- Debt Recova -->
+        <link rel="stylesheet" href="../assets/css/debt.css">
+    </head>
+    <body>
+        <div class="d-flex" id="wrapper">
+            <!-- Sidebar -->
+            <div class="box-shadow" id="sidebar-wrapper">
+                <nav id="sidebar" class="sidebar text-center bd-links">
+                    
+                </nav>
+            </div>
+            <!-- /#sidebar-wrapper -->
+    
+            <!-- Page Content -->
+            <div class="container-fluid" id="page-content-wrapper">
+                <div class="container p-4">
+                    <!-- Page Content Holder-->
+                    <div class="col-lg-12 box-shadow page-box-content px-4 py-3">
+                        <!-- Header Row -->
+                        <div class="row d-flex align-items-center">
+                            <div class="col-lg-4 col-md-12 col-sm-12 d-flex align-items-center">
+                                <a href="/pages/agents.html" class="text-gradient fs-5 fw-bold me-2">
+                                    <img src="/assets/img/less than.png" alt="">
+                                </a>
+                                <span class="fs-3 text-gradient me-2">|</span>
+                                <span class="mt-1 fs-5">Add New Agent</span>
+                            </div>
+                        </div>
+
+                        <!-- Row 1 -->
+                        <div class="row mt-3">
+                            <div class="col-lg-4 col-md-12 col-sm-12 text-center">
+                                <main class="main_full">
+                                    <div class="Container">
+                                        <div class="error_msg"></div>
+                                        <div class="d-flex upload-image justify-content-center my-4">
+                                            <div style="border: 1px solid #4E2CBE;" class="bg-light rounded-circle p-5">
+                                                <img width="50px" src="/assets/img/upload-img.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="uploaded_file_view" id="uploaded_view">
+                                            <span class="file_remove">X</span>
+                                        </div>
+                                        <div class="panel">
+                                            <div class="button_outer">
+                                                <div class="btn_upload">
+                                                    <input type="file" id="upload_file" name="">
+                                                    Upload Agent Image
+                                                </div>
+                                                <div class="processing_bar"></div>
+                                                <div class="success_box"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </main>
+                                      
+                            </div>
+                            <!-- Form -->
+                            <div class="col-lg-8 col-md-12 col-sm-12 mt-lg-0 mt-md-3 mt-sm-3">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <label for="" class="form-label fs-6 ">First Name</label>
+                                        <input type="text" class="form-control form-control-sm" id="agtfirstname" placeholder="First Name">
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <label for="" class="form-label fs-6 ">Last Name</label>
+                                        <input type="text" class="form-control form-control-sm" id="agtlastname" placeholder="Last Name">
+                                    </div>
+                                </div>
+                                <div class="row my-3">
+                                    <div class="col-lg-6">
+                                        <label for="" class="form-label fs-6 ">Email</label>
+                                        <input type="email" class="form-control form-control-sm" id="agtemail" placeholder="Email">
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <label for="" class="form-label fs-6 ">Phone Number</label>
+                                        <input type="number" class="form-control form-control-sm" id="agtnumber" placeholder="Phone Number">
+                                    </div>
+                                </div>
+                                <div class="row my-3">
+                                    <div class="col-lg-12">
+                                        <label for="" class="form-label fs-6 ">User Type</label>
+                                        <select class="form-select form-select-sm" aria-label="Default select example" id="agtusertype">
+                                            <option selected>Agent</option>
+                                            <option value="Admin">Admin</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row mt-4 ">
+                                    <div class="col-lg-4 d-grid">
+                                        <a href="javascript:void(0);" onclick="addNewAgent()" type="button" class="btn fw-bold butt px-5 card-link">Add Agent</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+        
+        <!-- BOOTSTRAP JS FILE -->
+        <script src="assets/bootstrap-5.2.3-dist/js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+        <!-- Jquery -->
+        <script src="/assets/js/jquery.js"></script>
+        <!-- Debt js file -->
+        <script src="/assets/js/agents.js"></script>
+        <script src="/assets/js/upload-photo.js"></script>
+        <!-- Sweet alert -->
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script>
+            $('#sidebar').load('/assets/components/sidebar.html');
+        </script>
+    </body>
+</html>

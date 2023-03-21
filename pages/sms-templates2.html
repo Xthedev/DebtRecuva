@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Debt Recuva - Dashboard</title>
+        <!-- Font Awesome CSS File -->        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+        <!-- Bootstrap CSS File -->
+        <link rel="stylesheet" href="../assets/bootstrap-5.0.2-dist/css/bootstrap.css">
+        <!-- Debt Recova -->
+        <link rel="stylesheet" href="../assets/css/debt.css">
+        <!-- summernote -->
+        <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
+    </head>
+    <body>
+        <!-- -------------------------------- Modal -------------------------------- -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content p-5" style="border-radius:20px;">
+                    <div class="col-12">
+                        <h5 class="fw-bold">Add SMS Template</h5>
+                    </div>
+                    <div class="col-12 mt-4">
+                        <label for="" class="form-label fs-6 fw-bold text-muted">Message</label>
+                    </div>
+                    <!-- Summernote -->
+                    <div id="summernote" class="border-0"></div>
+                    <div>
+                        <script>
+                            $('#summernote').summernote({
+                                placeholder: 'Debt Recuva',
+                                tabsize: 2,
+                                height: 200
+                            });
+                        </script>
+                    </div>
+                    <div class="col-12 d-flex align-items-center justify-content-end mt-4">
+                        <div>
+                            <a href="#" class="card-link btn butt mt-2 px-4 bg-gradient fw-bold">Send Sms</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ---------------------------- End of Modal ----------------------------- -->
+        <div class="d-flex" id="wrapper">
+            <!-- Sidebar -->
+            <div class="box-shadow" id="sidebar-wrapper">
+                <nav id="sidebar" class="sidebar text-center">
+                    
+                </nav>
+            </div>
+            <!-- /#sidebar-wrapper -->
+    
+            <!-- Page Content -->
+            <div class="container-fluid" id="page-content-wrapper">
+                <div class="container p-3">
+                    <div class="d-flex align-items-center mb-3">
+                        <a href="/pages/debtor-marketing.html" class="me-2">
+                            <img src="/assets/img/less than.png" alt="">
+                        </a>
+                        <span class="text-gradient fs-4 me-2">|</span>
+                        <span class="mt-1">Sms Templates</span>
+                    </div>
+                    <!-- Header Row --> 
+                    <div class="row d-flex align-items-center px-2">
+                        <div style="width: 408px; background: #bbb6c4; border-radius: 10px;" class="col-lg-6 col-md-12 col-sm-12 d-flex p-1">
+                            <div> <a href="javascript:void(0);" type="button" class="btn butt-b border-0 fw-bold bg-gradient text-white card-link">Sms Marketing</a> </div>
+                            <div> <a  type="button" class="btn text-dark butt-a border-0 fw-bold text-muted" href="/pages/email-template2.html">Email Marketing</a> </div> 
+                        </div> 
+                        <!-- search column --> 
+                        <div class="col-lg-6 col-md-12 col-sm-12 d-flex align-items-center ms-auto mt-lg-0 mt-sm-3 mt-md-3"> 
+                            <div class="ms-lg-auto header-form-input search-input-holder d-flex align-items-center border" style="background:none; margin-right:6px;"> 
+                                <!-- <i class="fa-solid fa-search fs-5 text-light-text m-2 ms-1"></i> -->
+                                <div> 
+                                    <img src="/assets/img/search.png" alt="" width="17.82px" height="16px"> 
+                                </div> 
+                                <input style="outline: none;" type="search" placeholder="Search"class="form-control bg-transparent border-0"> 
+                            </div> 
+                            <div class=""> 
+                                <a href="/add-sms-template.html" class="btn border-0 py-2 px-4 butt bg-gradient fw-bold card-link" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Add Templates</a>
+                            </div> 
+                        </div> 
+                    </div>
+                    
+                    <!-- Page Content -->
+                    <div class="col-lg-12 page-box-content">
+                        <!-- Row 1 -->
+                        <div class="row mt-2">
+                            <div class="col-lg-4 col-md-6 col-sm-12 mt-lg-3 mt-md-3 mt-sm-3">
+                                <div class="box-shadow p-4" style="border-radius: 13px;">
+                                    <div class="d-flex justify-content-end">
+                                        <img src="/assets/img/delete.png" alt="">
+                                    </div>
+                                    <div style="font-size:14px;" class="p-2 pb-0">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim ex, iusto placeat molestias doloribus rem sapiente, reiciendis omnis, voluptatum dolorem nemo atque eligendi inventore itaque consectetur repudiandae explicabo optio molestiae.</p>
+                                    </div>
+                                    <div class="text-center">
+                                        <a href="#" class="card-link btn butt fw-bold px-4">Select</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12 mt-lg-3 mt-md-3 mt-sm-3">
+                                <div class="box-shadow p-4" style="border-radius: 13px;">
+                                    <div class="d-flex justify-content-end">
+                                        <img src="/assets/img/delete.png" alt="">
+                                    </div>
+                                    <div style="font-size:14px;" class="p-2 pb-0">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim ex, iusto placeat molestias doloribus rem sapiente, reiciendis omnis, voluptatum dolorem nemo atque eligendi inventore itaque consectetur repudiandae explicabo optio molestiae.</p>
+                                    </div>
+                                    <div class="text-center">
+                                        <a href="#" class="card-link btn butt fw-bold px-4">Select</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12 mt-lg-3 mt-md-3 mt-sm-3">
+                                <div class="box-shadow p-4" style="border-radius: 13px;">
+                                    <div class="d-flex justify-content-end">
+                                        <img src="/assets/img/delete.png" alt="">
+                                    </div>
+                                    <div style="font-size:14px;" class="p-2 pb-0">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim ex, iusto placeat molestias doloribus rem sapiente, reiciendis omnis, voluptatum dolorem nemo atque eligendi inventore itaque consectetur repudiandae explicabo optio molestiae.</p>
+                                    </div>
+                                    <div class="text-center">
+                                        <a href="#" class="card-link btn butt fw-bold px-4">Select</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12 mt-lg-3 mt-md-3 mt-sm-3">
+                                <div class="box-shadow p-4" style="border-radius: 13px;">
+                                    <div class="d-flex justify-content-end">
+                                        <img src="/assets/img/delete.png" alt="">
+                                    </div>
+                                    <div style="font-size:14px;" class="p-2 pb-0">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim ex, iusto placeat molestias doloribus rem sapiente, reiciendis omnis, voluptatum dolorem nemo atque eligendi inventore itaque consectetur repudiandae explicabo optio molestiae.</p>
+                                    </div>
+                                    <div class="text-center">
+                                        <a href="#" class="card-link btn butt fw-bold px-4">Select</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12 mt-lg-3 mt-md-3 mt-sm-3">
+                                <div class="box-shadow p-4" style="border-radius: 13px;">
+                                    <div class="d-flex justify-content-end">
+                                        <img src="/assets/img/delete.png" alt="">
+                                    </div>
+                                    <div style="font-size:14px;" class="p-2 pb-0">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim ex, iusto placeat molestias doloribus rem sapiente, reiciendis omnis, voluptatum dolorem nemo atque eligendi inventore itaque consectetur repudiandae explicabo optio molestiae.</p>
+                                    </div>
+                                    <div class="text-center">
+                                        <a href="#" class="card-link btn butt fw-bold px-4">Select</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12 mt-lg-3 mt-md-3 mt-sm-3">
+                                <div class="box-shadow p-4" style="border-radius: 13px;">
+                                    <div class="d-flex justify-content-end">
+                                        <img src="/assets/img/delete.png" alt="">
+                                    </div>
+                                    <div style="font-size:14px;" class="p-2 pb-0">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim ex, iusto placeat molestias doloribus rem sapiente, reiciendis omnis, voluptatum dolorem nemo atque eligendi inventore itaque consectetur repudiandae explicabo optio molestiae.</p>
+                                    </div>
+                                    <div class="text-center">
+                                        <a href="#" class="card-link btn butt fw-bold px-4">Select</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12 mt-lg-3 mt-md-3 mt-sm-3">
+                                <div class="box-shadow p-4" style="border-radius: 13px;">
+                                    <div class="d-flex justify-content-end">
+                                        <img src="/assets/img/delete.png" alt="">
+                                    </div>
+                                    <div style="font-size:14px;" class="p-2 pb-0">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim ex, iusto placeat molestias doloribus rem sapiente, reiciendis omnis, voluptatum dolorem nemo atque eligendi inventore itaque consectetur repudiandae explicabo optio molestiae.</p>
+                                    </div>
+                                    <div class="text-center">
+                                        <a href="#" class="card-link btn butt fw-bold px-4">Select</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12 mt-lg-3 mt-md-3 mt-sm-3">
+                                <div class="box-shadow p-4" style="border-radius: 13px;">
+                                    <div class="d-flex justify-content-end">
+                                        <img src="/assets/img/delete.png" alt="">
+                                    </div>
+                                    <div style="font-size:14px;" class="p-2 pb-0">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim ex, iusto placeat molestias doloribus rem sapiente, reiciendis omnis, voluptatum dolorem nemo atque eligendi inventore itaque consectetur repudiandae explicabo optio molestiae.</p>
+                                    </div>
+                                    <div class="text-center">
+                                        <a href="#" class="card-link btn butt fw-bold px-4">Select</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 col-sm-12 mt-lg-3 mt-md-3 mt-sm-3">
+                                <div class="box-shadow p-4" style="border-radius: 13px;">
+                                    <div class="d-flex justify-content-end">
+                                        <img src="/assets/img/delete.png" alt="">
+                                    </div>
+                                    <div style="font-size:14px;" class="p-2 pb-0">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim ex, iusto placeat molestias doloribus rem sapiente, reiciendis omnis, voluptatum dolorem nemo atque eligendi inventore itaque consectetur repudiandae explicabo optio molestiae.</p>
+                                    </div>
+                                    <div class="text-center">
+                                        <a href="#" class="card-link btn butt fw-bold px-4">Select</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+        
+
+        <!-- BOOTSTRAP JS FILE -->
+        <script src="/assets/bootstrap-5.0.2-dist/js/bootstrap.bundle.js"></script>
+        <script src="assets/bootstrap-5.2.3-dist/js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+        <!-- Jquery -->
+        <script src="/assets/js/jquery.js"></script>
+        <script>
+            $('#sidebar').load('/assets/components/sidebar.html');
+        </script>
+    </body>
+</html>

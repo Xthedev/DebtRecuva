@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Debt Recuva - Dashboard</title>
+        <!-- Font Awesome CSS File -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+        <!-- Bootstrap CSS File -->
+        <link rel="stylesheet" href="../assets/bootstrap-5.0.2-dist/css/bootstrap.css">
+        <!-- Debt Recova -->
+        <link rel="stylesheet" href="../assets/css/debt.css">
+    </head>
+    <body>
+        <div class="d-flex" id="wrapper">
+            <!-- Sidebar -->
+            <div class="box-shadow" id="sidebar-wrapper">
+                <div id="sidebar" class="sidebar text-center bd-links">
+
+                </div>
+            </div>
+            <!-- /#sidebar-wrapper -->
+    
+            <!-- Page Content -->
+            <div class="container-fluid" id="page-content-wrapper">
+                <div class="container p-4">
+                    <!-- Page Content Holder-->
+                    <div class="col-lg-12 box-shadow page-box-content px-4 py-1">
+                        <!-- Header Row -->
+                        <div class="row d-flex align-items-center mt-3">
+                            <div class="col-lg-8 col-md-12 col-sm-12 d-flex align-items-center">
+                                <a href="/pages/debt-portfolio.html" class="me-2">
+                                    <img src="/assets/img/less than.png" alt="">
+                                </a>
+                                <span class="fs-4 text-gradient me-2">|</span>
+                                <h6 class="mt-2 me-2">Add new debt-portfolio</h6>
+                            </div>
+                        </div>
+
+                        <!-- Form content-->
+                        <div id="allCompanies" class="row pt-5">
+                            <div class="col-lg-3 d-flex justify-content-center">
+                                <div class="text-center">
+                                    <div style="border: 1px solid #4E2CBE;" class="bg-light p-5 rounded-circle">
+                                        <img src="/assets/img/upload-img.png" class="img-fluid" alt="...">
+                                    </div>
+                                    <div>
+                                        <button class="btn butt card-link mt-3">Upload Debtor Profile</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-9 px-3">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <label for="" class="form-label fs-6 ">Account Full Name</label>
+                                        <input id="accfullname" type="text" class="form-control form-control-sm" placeholder="Account Full Name">
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <label for="" class="form-label fs-6 ">Account Email</label>
+                                        <input type="email" class="form-control form-control-sm" id="accemail" placeholder="Account Email">
+                                    </div>
+                                </div>
+                                <div class="row my-4">
+                                    <div class="col-lg-6">
+                                        <label for="" class="form-label fs-6 ">Account Mobile</label>
+                                        <input type="number" class="form-control  form-control-sm" id="accmobile" placeholder="Account Mobile">
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <label for="" class="form-label fs-6 ">Days In Arrears</label>
+                                        <input type="number" class="form-control  form-control-sm" id="daysinarrears" placeholder="Days In Arrears">
+                                    </div>
+                                </div>
+                                <div class="row my-4">
+                                    <div class="col-lg-6">
+                                        <label for="" class="form-label fs-6 ">Classification</label>
+                                        <input type="text" class="form-control  form-control-sm" id="classification" placeholder="91 Days +">
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <label for="" class="form-label fs-6 ">Total Amount Due</label>
+                                        <input type="text" class="form-control  form-control-sm" id="totaldue" placeholder="Total Amount Due">
+                                    </div>
+                                </div>
+                                <div class="row mt-4">
+                                    <div class="col-lg-6">
+                                        <label for="" class="form-label fs-6 ">Batch Month</label>
+                                        <input type="text" class="form-control  form-control-sm" id="batchmonth" placeholder="Batch Month">
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <label for="" class="form-label fs-6 ">Batch Year</label>
+                                        <input type="text" class="form-control  form-control-sm" id="batchyear" placeholder="Batch Year">
+                                    </div>
+                                </div>
+                                <div class="row my-4">
+                                    <div class="col-lg-3 d-grid">
+                                        <a href="javascript:void(0);" onclick="addNewDebtportfolio()" type="button" class="fw-bold btn btn-sm butt px-5 py-1 card-link">Add</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+        
+        <!-- BOOTSTRAP JS FILE -->
+        <script src="/assets/js/debtportfolio.js"></script>
+        <script src="assets/bootstrap-5.2.3-dist/js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+        <!-- Jquery -->
+        <script src="/assets/js/jquery.js"></script>
+        <!-- Sweet alert -->
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script>
+            $('#sidebar').load('/assets/components/sidebar.html');
+        </script>
+    </body>
+</html>

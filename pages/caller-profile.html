@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Debt Recuva - Dashboard</title>
+        <!-- Font Awesome CSS File -->        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+        <!-- Bootstrap CSS File -->
+        <link rel="stylesheet" href="../assets/bootstrap-5.0.2-dist/css/bootstrap.css">
+        <!-- Debt Recova -->
+        <link rel="stylesheet" href="../assets/css/debt.css">
+    </head>
+    <body>
+
+         <!-- -------------------------- THE DIALER BUTTON -------------------------- -->
+         <div style="z-index: 1; right: -15px; top: 30%; position: absolute; transform: rotate(-90deg);"   class="">
+            <button type="button" class="px-2 d-flex card-link btn butt rounded border-0" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                <span>Dialer</span>
+                <img style="transform: rotate(90deg)" src="/assets/img/myicons/icon/dialer.png" alt="" class="bg-white p-1 rounded-circle ms-2">
+            </button>
+        </div>
+
+        <!-- Call Dialer Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-sm">
+                <div style="z-index: 1; left: -17.3%; top: 10%; position: absolute; transform: rotate(-90deg);">
+                    <button style="cursor: pointer; border-radius: 0px; border-top-left-radius: 10px;border-top-right-radius: 10px;" type="button" class="px-2 d-flex align-items-center card-link btn butt border-0" data-bs-dismiss="modal">
+                        <span class="me-1">Close</span>
+                        <img src="/assets/img/close.png" alt="">
+                    </button>
+                </div>
+                <div style="border-radius:18px;border: 2px solid rgba(78, 44, 190);" class="modal-content">
+                    <div class="modal-body">
+                        <div id="dialer_input_td" class="mb-4 d-flex align-items-center p-2">
+                            <input class="text-center" type="number" placeholder="0902 324 5555" maxlength="11"/>
+                            <div>
+                                <img alt="delete" onclick="dialerClick('delete', 'delete')" src="/assets/img/backspace.png" title="Delete" />
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-around mb-3">
+                            <div onclick="dialerClick('dial', 1)" style="cursor:pointer;background-color:#DFDEDE;" class="py-3 fw-bold fs-5 px-4 rounded-circle">1</div>
+                            <div onclick="dialerClick('dial', 2)" style="cursor:pointer;background-color:#DFDEDE;" class="py-3 fw-bold fs-5 px-4 rounded-circle">2</div>
+                            <div onclick="dialerClick('dial', 3)" style="cursor:pointer;background-color:#DFDEDE;" class="py-3 fw-bold fs-5 px-4 rounded-circle">3</div>
+                        </div>
+                        <div class="d-flex justify-content-around mb-3">
+                            <div onclick="dialerClick('dial', 4)" style="cursor:pointer;background-color:#DFDEDE;" class="py-3 fw-bold fs-5 px-4 rounded-circle">4</div>
+                            <div onclick="dialerClick('dial', 5)" style="cursor:pointer;background-color:#DFDEDE;" class="py-3 fw-bold fs-5 px-4 rounded-circle">5</div>
+                            <div onclick="dialerClick('dial', 6)" style="cursor:pointer;background-color:#DFDEDE;" class="py-3 fw-bold fs-5 px-4 rounded-circle">6</div>
+                        </div>
+                        <div class="d-flex justify-content-around mb-3">
+                            <div onclick="dialerClick('dial', 7)" style="cursor:pointer;background-color:#DFDEDE;" class="py-3 fw-bold fs-5 px-4 rounded-circle">7</div>
+                            <div onclick="dialerClick('dial', 8)" style="cursor:pointer;background-color:#DFDEDE;" class="py-3 fw-bold fs-5 px-4 rounded-circle">8</div>
+                            <div onclick="dialerClick('dial', 9)" style="cursor:pointer;background-color:#DFDEDE;" class="py-3 fw-bold fs-5 px-4 rounded-circle">9</div>
+                        </div>
+                        <div class="d-flex justify-content-around mb-4">
+                            <div onclick="dialerClick('dial', 0)" style="cursor:pointer;background-color:#DFDEDE;" class="py-3 fw-bold fs-5 px-4 rounded-circle">0</div>
+                        </div>
+                        <div class="d-flex justify-content-around mb-3">
+                            <button type="button" class="btn butt btn-sm p-3 rounded-circle">
+                                <img src="/assets/img/myicons/icon/phone.png" class="m-1" alt="" width="13px">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of Call Dialer Modal -->
+
+        <!-- Call Modal --> 
+         <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-sm">
+                <div style="z-index: 1; left: -17.3%; top: 10%; position: absolute; transform: rotate(-90deg);">
+                    <button style="cursor: pointer; border-radius: 0px; border-top-left-radius: 10px;border-top-right-radius: 10px;" type="button" class="px-2 d-flex align-items-center card-link btn butt border-0" data-bs-dismiss="modal">
+                        <span class="me-1">Close</span>
+                        <img src="/assets/img/close.png" alt="">
+                    </button>
+                </div>
+                <div style="border-radius:18px;border: 2px solid rgba(78, 44, 190);" class="modal-content">
+                    <div class="modal-body">
+                        <div class="">
+                            <div class="text-center">
+                                    <h6 class="text-gradient mt-3">Ongoing Call</h6>
+                            <span class="text-gradient">12:44</span>
+                            </div>
+                            <div class="d-flex mt-3 justify-content-center">
+                                <div class="me-2">
+                                    <img src="/assets/img/profiler.png" alt="" width="60px">
+                                </div>
+                                <div class="pt-2">
+                                    <h6 class="m-0">John Doeelant</h6>
+                                    <span>0908 455 4433</span>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-around mt-4">
+                                <div style="background-color: #DFDEDE;cursor: pointer;padding:6px 13px 10px 13px;" class=" rounded-circle">
+                                    <img src="/assets/img/mute.png" alt="">
+                                </div>
+                                <div style="background-color: #DFDEDE;cursor: pointer;padding:6px 13px 10px 13px;" class=" rounded-circle">
+                                    <img src="/assets/img/call-logs.png" alt="">
+                                </div>
+                                <div style="background-color: #DFDEDE;cursor: pointer;padding:6px 13px 10px 13px;" class=" rounded-circle">
+                                    <img src="/assets/img/volume.png" alt="">
+                                </div>
+                                <div  data-bs-toggle="modal" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal" style="background-color: #FF0000;cursor: pointer;padding:6px 13px 10px 13px;" class=" rounded-circle">
+                                    <img src="/assets/img/telephone.png" alt="">
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-around align-items-center mt-4" style="background: linear-gradient(89.83deg, rgba(78, 44, 190, 0.18) 0.15%, rgba(163, 107, 226, 0.18) 99.04%);border-radius: 11px;">
+                                <div>
+                                    <div class="">
+                                        <i class="fa-solid fa-record-vinyl"></i>
+                                    </div>
+                                </div>
+                                <div class="">
+                                    <h6 class="m-0">Recording</h6>
+                                    <span>12:44</span>
+                                </div>
+                                <div class="py-2">
+                                    <button class="btn btn-sm butt-red py-1 card-link">Stop</button>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <h5 class="fw-lighter ">Comment</h5>
+                                <textarea style="padding:5px;font-size:15px;outline:none;border: 1px solid #E0E0E0;border-radius:8px;max-height:80px;min-height:80px; width: 100%;" type="text" placeholder="Comment"></textarea>
+                            </div>
+                            <div class="text-center mt-3">
+                                <button class="btn tbn-sm butt px-2 card-link">Comment</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of Call Modal -->
+
+        <!-- Call Report Modal -->
+        <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+            <div class="modal-dialog modal-sm">
+                <div style="z-index: 1; left: -17.3%; top: 10%; position: absolute; transform: rotate(-90deg);">
+                    <button style="cursor: pointer; border-radius: 0px; border-top-left-radius: 10px;border-top-right-radius: 10px;" type="button" class="px-2 d-flex align-items-center card-link btn butt border-0" data-bs-dismiss="modal">
+                        <span class="me-1">Close</span>
+                        <img src="/assets/img/close.png" alt="">
+                    </button>
+                </div>
+                <div style="border-radius:18px;border: 2px solid rgba(78, 44, 190);" class="modal-content">
+                    <div class="modal-body">
+                        <div class="">
+                            <div class="text-center">
+                                <h6 class="text-gradient mt-3">Call Report</h6>
+                            <span class="text-gradient">12:44</span>
+                            </div>
+                            <div class="row mt-4">
+                                <div class="col-12">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">  <span class="ms-1">Promised to pay back</span>
+                                </div>
+                                <div class="col-12">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"> <span class="ms-1">Agree to call back</span>
+                                </div>
+                                <div class="col-12">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"> <span class="ms-1">Refused to pay</span>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <h5 class="fw-lighter ">Comment</h5>
+                                <textarea style="padding:5px;font-size:15px;outline:none;border: 1px solid #E0E0E0;border-radius:8px;max-height:80px;min-height:100px; width: 100%;" type="text" placeholder="Comment"></textarea>
+                            </div>
+                            <div class="text-center mt-3">
+                                <button class="btn tbn-sm butt px-2 card-link">Comment</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Call Report Modal -->
+
+        <div class="d-flex" id="wrapper">
+            <!-- Sidebar -->
+            <div class="box-shadow" id="sidebar-wrapper">
+                <nav id="sidebar" class="sidebar text-center bd-links">
+                   
+                </nav>
+            </div>
+            <!-- /#sidebar-wrapper -->
+           
+
+            <!-- Page Content -->
+            <div class="container-fluid" id="page-content-wrapper">
+                <div class="container p-3">
+                    <!-- Page Content -->
+                    <div class="col-lg-12 box-shadow page-box-content px-4 py-3">
+                        <!-- Header Row -->
+                        <div class="row d-flex align-items-center">
+                            <div class="col-lg-12 col-md-12 col-md-12 col-sm-12 d-flex justify-content-between align-items-center">
+                                <div class="d-flex align-items-center">
+                                    <a href="/pages/call-center.html">
+                                        <img src="/assets/img/less than.png" alt="">
+                                    </a>
+                                    <span class="text-gradient fs-4 mx-2">|</span>
+                                    <h5 class="mt-2">Profile</h5>
+                                </div>
+                                <div>
+                                    <h6 class="fw-bold">Balance : <span class="text-gradient">N 447,448</span></h6>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Row 1 -->
+                        <div class="row">
+                            <div class="col-lg-12 mt-3">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <img src="/assets/img/profiler.png" alt="" width="60px">
+                                    </div>
+                                    <div>
+                                        <button type="button" class="btn butt border-0 d-flex align-items-center card-link bg-gradient"  data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                                            <span class="fw-bold me-2">Start Call</span>
+                                            <img src="/assets/img/myicons/icon/phone.png" alt="" width="15px">
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-lg-3 col-md-6 col-sm-12 mt-2">
+                                <label>First Name</label>
+                                <input type="text" class="form-control form-control-sm px-1 bg-transparent" placeholder="..." disabled>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12 mt-2">
+                                <label>Last Name</label>
+                                <input type="text" class="form-control form-control-sm px-1 bg-transparent" placeholder="..." disabled>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12 mt-2">
+                                <label>Principal Amount</label>
+                                <input type="text" class="form-control form-control-sm px-1 bg-transparent" placeholder="..." disabled>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12 mt-2">
+                                <label>Fine Per Day(%)</label>
+                                <input type="text" class="form-control form-control-sm px-1 bg-transparent" placeholder="..." disabled>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-lg-3 col-md-6 col-sm-12 mt-2">
+                                <label>Middle Name</label>
+                                <input type="text" class="form-control form-control-sm px-1 bg-transparent" placeholder="..." disabled>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12 mt-2">
+                                <label>Phone Number</label>
+                                <input type="text" class="form-control form-control-sm px-1 bg-transparent" placeholder="..." disabled>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12 mt-2">
+                                <label>Duration</label>
+                                <input type="text" class="form-control form-control-sm px-1 bg-transparent" placeholder="..." disabled>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12 mt-2">
+                                <label>Interest</label>
+                                <input type="text" class="form-control form-control-sm px-1 bg-transparent" placeholder="..." disabled>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-lg-3 col-md-6 col-sm-12 mt-2">
+                                <label>State</label>
+                                <input type="text" class="form-control form-control-sm px-1 bg-transparent" placeholder="..." disabled>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12 mt-2">
+                                <label>City</label>
+                                <input type="text" class="form-control form-control-sm px-1 bg-transparent" placeholder="..." disabled>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12 mt-2">
+                                <label>Amount Paid</label>
+                                <input type="text" class="form-control form-control-sm px-1 bg-transparent" placeholder="..." disabled>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-12 mt-2">
+                                <label>Email</label>
+                                <input type="text" class="form-control form-control-sm px-1 bg-transparent" placeholder="..." disabled>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-lg-3 col-md-6 col-sm-12 mt-2">
+                                <label>Address</label>
+                                <input type="text" class="form-control form-control-sm px-1 bg-transparent" placeholder="..." disabled>
+                            </div>
+                        </div>
+                       <div class="row mt-5">
+                            <div class="col-lg-8 col d-flex justify-content-between align-items-center">
+                                <div>
+                                    <h6 class="m-0 page-title">Call History</h6>
+                                </div>
+                                <div>
+                                    <h6>Times Called : <span class="fw-bold text-gradient">3</span></h6>
+                                </div>
+                            </div>
+                       </div>
+                       <!-- Table Row -->
+                         <!-- Table Row -->
+                         <div class="row mt-4">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" class="fw-lighter text-light-text">Date</th>
+                                            <th scope="col" class="fw-lighter text-light-text">Time</th>
+                                            <th scope="col" class="fw-lighter text-light-text">Agent</th>
+                                            <th scope="col" class="fw-lighter text-light-text">Duration</th>
+                                            <th scope="col" class="fw-lighter text-light-text">Status</th>
+                                            <th scope="col" class="fw-lighter text-light-text">Recording</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="fw-bold">2/Jan/2022</td>
+                                            <td class="fw-bold">12:30 AM</td>
+                                            <td class="fw-bold">Alex Rei</td>
+                                            <td class="fw-bold">20:44</td>
+                                            <td class="fw-bold">Agree To Pay</td>
+                                            <td class="d-flex">
+                                                <div class="d-flex align-items-center">
+                                                    <img src="/assets/img/call-record.png" alt="">
+                                                </div>
+                                                <div class="d-flex align-items-center ms-3">
+                                                    <img src="/assets/img/download.png" alt="">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold">2/Jan/2022</td>
+                                            <td class="fw-bold">12:30 AM</td>
+                                            <td class="fw-bold">Alex Rei</td>
+                                            <td class="fw-bold">20:44</td>
+                                            <td class="fw-bold">Agree To Pay</td>
+                                            <td class="d-flex">
+                                                <div class="d-flex align-items-center">
+                                                    <img src="/assets/img/call-record.png" alt="">
+                                                </div>
+                                                <div class="d-flex align-items-center ms-3">
+                                                    <img src="/assets/img/download.png" alt="">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold">2/Jan/2022</td>
+                                            <td class="fw-bold">12:30 AM</td>
+                                            <td class="fw-bold">Alex Rei</td>
+                                            <td class="fw-bold">20:44</td>
+                                            <td class="fw-bold">Agree To Pay</td>
+                                            <td class="d-flex">
+                                                <div class="d-flex align-items-center">
+                                                    <img src="/assets/img/call-record.png" alt="">
+                                                </div>
+                                                <div class="d-flex align-items-center ms-3">
+                                                    <img src="/assets/img/download.png" alt="">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold">2/Jan/2022</td>
+                                            <td class="fw-bold">12:30 AM</td>
+                                            <td class="fw-bold">Alex Rei</td>
+                                            <td class="fw-bold">20:44</td>
+                                            <td class="fw-bold">Agree To Pay</td>
+                                            <td class="d-flex">
+                                                <div class="d-flex align-items-center">
+                                                    <img src="/assets/img/call-record.png" alt="">
+                                                </div>
+                                                <div class="d-flex align-items-center ms-3">
+                                                    <img src="/assets/img/download.png" alt="">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+        
+        <!-- BOOTSTRAP JS FILE -->
+        <script src="/assets/bootstrap-5.0.2-dist/js/bootstrap.bundle.js"></script>
+        <script src="assets/bootstrap-5.2.3-dist/js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+        <!-- Jquery -->
+        <script src="/assets/js/jquery.js"></script>
+        <script>
+            $('#sidebar').load('/assets/components/sidebar.html');
+        </script>
+    </body>
+</html>

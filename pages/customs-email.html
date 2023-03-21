@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Debt Recuva - Dashboard</title>
+        <!-- Font Awesome CSS File -->        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+        <!-- Bootstrap CSS File -->
+        <link rel="stylesheet" href="../assets/bootstrap-5.0.2-dist/css/bootstrap.css">
+        <!-- Debt Recova -->
+        <link rel="stylesheet" href="../assets/css/debt.css">
+    </head>
+    <body>
+        <div class="d-flex" id="wrapper">
+            <!-- Sidebar -->
+            <div class="box-shadow" id="sidebar-wrapper">
+                <nav id="sidebar" class="sidebar text-center bd-links">
+                    
+                </nav>
+            </div>
+            <!-- /#sidebar-wrapper -->
+    
+            <!-- Page Content -->
+            <div class="container-fluid" id="page-content-wrapper">
+                <div class="container p-4">
+                    <div class="row">
+                        <div style="width: 410px; background: #bbb6c4; border-radius: 5px;" class="d-flex p-1">
+                            <div>
+                                <a href="/pages/customs-sms.html" type="button" class="btn butt-a border-0 text-muted fw-bold card-link">Sms Marketing</a>
+                            </div>
+                            <div>
+                                <a  type="button" class="btn text-dark butt-b border-0 fw-bold bg-gradient text-white" href="javascript:void(0);">Email Marketing</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div style="border-radius: 20px;" class="col-lg-6 col-md-12 col-sm-12 box-shadow p-3">
+                            <div class="col-12 d-flex align-items-center">
+                                <div class="d-flex align-items-center">
+                                    <a href="/pages/debtor-marketing.html" class="me-2">
+                                        <img src="/assets/img/less than.png" alt="">
+                                    </a>
+                                    <span class="text-gradient fs-4 me-2">|</span>
+                                    <span class="fw-bold mt-1">Custom Marketing</span>
+                                </div>
+
+                                <div class="ms-auto header-form-input search-input-holder d-flex align-items-center">
+                                    <!-- <i class="fa-solid fa-search fs-5 text-light-text m-2 ms-1"></i> -->
+                                    <div>
+                                        <img src="/assets/img/search.png" alt="" width="17.82px" height="16px">
+                                    </div>
+                                    <input style="outline: none;" type="search" placeholder="Search"class="form-control bg-transparent border-0">
+                                </div>
+                            </div>
+                            <!-- Table -->
+                            <table style="text-align: center;" class="table mt-2">
+                                <thead>
+                                    <tr>
+                                        <th scope="col" class="text-muted">S/N</th>
+                                        <th scope="col" class="text-muted">Email</th>
+                                        <th scope="col"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>example@gmail.com</td>
+                                        <td><a href="#" class="card-link fw-bold btn butt mt-2 px-5">Edit</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>example@gmail.com</td>
+                                        <td><a href="#" class="card-link fw-bold btn butt mt-2 px-5">Edit</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>example@gmail.com</td>
+                                        <td><a href="#" class="card-link fw-bold btn butt mt-2 px-5">Edit</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>example@gmail.com</td>
+                                        <td><a href="#" class="card-link fw-bold btn butt mt-2 px-5">Edit</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>example@gmail.com</td>
+                                        <td><a href="#" class="card-link fw-bold btn butt mt-2 px-5">Edit</a></td>
+                                    </tr>
+                                </tbody>
+                              </table>
+                              <!-- Table end -->
+                              <!-- Pagination Start -->
+                            <div class="row">
+                                <div class="col-lg-12 d-flex">
+                                   <div class="ms-auto mt-3">
+                                        <nav aria-label="Page navigation example">
+                                            <ul class="pagination">
+                                                <li class=" me-4 ">
+                                                    <a class="page-link rounded-2 bg-light border-0" href="#" aria-label="Previous">
+                                                        <i class="fa-solid fa-less-than text-dark fw-bold"></i>
+                                                    </a>
+                                                </li>
+                                                <li class="page-item me-4">
+                                                    <a class="page-link rounded-2 text-white fw-bold active bg-light border-0" href="#">1</a>
+                                                </li>
+                                                <li class="page-item me-4">
+                                                    <a class="page-link rounded-2 text-dark fw-bold bg-light border-0" href="#">2</a>
+                                                </li>
+                                                <li class="page-item me-4">
+                                                    <a class="page-link rounded-2 text-dark fw-bold bg-light border-0" href="#">3</a>
+                                                </li>
+                                                <li class="page-item me-4">
+                                                    <a class="page-link rounded-2 text-dark fw-bold bg-light border-0" href="#">4</a>
+                                                </li>
+                                                <li class="page-item me-4">
+                                                    <a class="page-link rounded-2 bg-light border-0" href="#" aria-label="Next">
+                                                        <i class="fa-solid fa-greater-than text-dark fw-bold"></i>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                   </div>
+                                </div>
+                            </div>
+                
+                        </div>
+                        <div class="col-lg-6 col-md-12 col-sm-12 mt-lg-0 mt-md-3 mt-sm-3">
+                            <div class="box-shadow p-3" style="border-radius: 20px;">
+                                <div class="text-center mt-2">
+                                    <h5>Add Email</h5>
+                                </div>
+                                <div class="mt-3">
+                                    <label>Email</label>
+                                </div>
+                                <div class="mt-1">
+                                    <input type="text" class="form-control" id="" placeholder="Email">
+                                </div>
+                                <div class="text-center">
+                                    <a href="#" class="card-link btn butt px-4 mt-3 fw-bold">Add Recipient</a>
+                                </div>
+                            </div>
+                            <div class="box-shadow p-4 mt-4 m-5" style="border-radius: 20px;">
+                                <div class="text-center">
+                                    <h6>Emails : <span class="text-gradient">97</span></h6>
+                                </div>
+                                <div class="mt-3 text-center">
+                                    <a href="/pages/custom-email-marketing.html" class="btn border-0 py-2 px-4 butt bg-gradient fw-bold card-link">Proceed</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+                    
+                    
+            
+            
+
+        <!-- /#page-content-wrapper -->
+
+        <!-- BOOTSTRAP JS FILE -->
+        <script src="../assets/bootstrap-5.2.3-dist/js/bootstrap.min.js"></script>
+        <script src="../assets/bootstrap-5.0.2-dist/js/bootstrap.bundle.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+        <!-- Jquery -->
+        <script src="/assets/js/jquery.js"></script>
+        <script>
+            $('#sidebar').load('/assets/components/sidebar.html');
+        </script>
+    </body>
+</html>
+
+
+

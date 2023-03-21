@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Debt Recuva - Dashboard</title>
+        <!-- Font Awesome CSS File -->        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+        <!-- Bootstrap CSS File -->
+        <link rel="stylesheet" href="../assets/bootstrap-5.0.2-dist/css/bootstrap.css">
+        <!-- Debt Recova -->
+        <link rel="stylesheet" href="../assets/css/debt.css">
+    </head>
+    <body>
+        <div class="d-flex" id="wrapper">
+            <!-- Sidebar -->
+            <div class="box-shadow" id="sidebar-wrapper">
+                <nav id="sidebar" class="sidebar text-center bd-links">
+                  
+                </nav>
+            </div>
+            <!-- /#sidebar-wrapper -->
+    
+            <!-- Page Content -->
+            <div class="container-fluid" id="page-content-wrapper">
+                <div class="container p-4 pt-0">
+
+                    <div class="row d-flex align-items-center mt-3 box-shadow p-2 pageHeaderTop">
+                        <!-- Side Left -->
+                        <div class="col-lg-4 col-md-12 col-sm-12 d-flex align-items-center">
+                            <h6 class="mt-2 fw-bold">Dashboard Summary</h6>
+                        </div>
+                        <!-- End of Side Left -->
+
+                        <!-- Side Right -->
+                        <!-- <div class="col-lg-7 col-md-12 col-sm-12 d-flex justify ms-lg-auto mt-lg-0 mt-md-3 mt-sm-3">
+                            <div class=" ms-lg-auto header-form-input select-input-holder d-flex align-items-center" style="margin-left:6px;">
+                                <span class="sortby">Sort By : </span>
+                                <select style="width: 70%; outline: none;" class="p-2 bg-transparent border-0 fw-bold" aria-label="Default select example">
+                                    <option selected>Last 6 Months</option>
+                                    <option value="1">Last 6 Months</option>
+                                    <option value="2">Last 6 Months</option>
+                                    <option value="3">Last 1 week</option>
+                                </select>
+                            </div>
+                        </div> -->
+                    </div>
+                    <div class="row row-cols-lg-5 row-cols-md-1 row-cols-1 mt-3 g-3">
+                        <div class="col">
+                            <a href="/pages/company-accounts.html">
+                                <div  style="border:1px solid #e8e8e8;border-left:5px solid #9747FF;border-radius:8px;" class="px-3 py-2 pb-3 hover">
+                                    <div class="align-items-center">
+                                        <div><h6 class="text-muted mt-2">Company</h6></div>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <h6 class="fw-bold text-dark" id="Totalcompany"> </h6>
+                                            <div>
+                                                <span style="background-color:#D8FFEC;color:#00AC4F;" class="badge p-2 d-flex align-items-center fw-light"><img src="/assets/img/arrow-up.png" class="" alt=""></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="/pages/debt-portfolio.html">
+                                <div  style="border:1px solid #e8e8e8;border-left:5px solid #9197B3;border-radius:8px;" class="px-3 py-2 pb-3 hover">
+                                    <div class="align-items-center">
+                                        <div><h6 class="text-muted mt-2">Debtors</h6></div>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <h6 class="fw-bold text-dark" id="Totaldebtors"> </h6>
+                                            <div>
+                                                <span style="background-color:#dcb2ffa3;color:#4E2CBE;" class="badge p-2 d-flex align-items-center fw-light"><img src="/assets/img/arrow-up purple.png" width="11px" class="" alt=""></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="/pages/agents.html">
+                                <div  style="border:1px solid #e8e8e8;border-left:5px solid #522FC0;border-radius:8px;" class="px-3 py-2 pb-3 hover">
+                                    <div class="align-items-center">
+                                        <div><h6 class="text-muted mt-2">All Agents</h6></div>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <h6 class="fw-bold text-dark" id="Totalagents"> </h6>
+                                            <div>
+                                                <span style="background-color:#D8FFEC;color:#00AC4F;" class="badge p-2 d-flex align-items-center fw-light"><img src="/assets/img/arrow-up.png" class="" alt=""></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="/pages/agents.html">
+                                <div  style="border:1px solid #e8e8e8;border-left:5px solid #9747FF;border-radius:8px;" class="px-3 py-2 pb-3 hover">
+                                    <div class="align-items-center">
+                                        <div><h6 class="text-muted mt-2">Active Agents</h6></div>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <h6 class="fw-bold text-dark">13,344</h6>
+                                            <div>
+                                                <span style="background-color:#dcb2ffa3;color:#4E2CBE;" class="badge p-2 d-flex align-items-center fw-light"><img src="/assets/img/arrow-up purple.png" width="11px" class="me-2" alt="">122</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a href="javascript:void(0);">
+                                <div  style="border:1px solid #e8e8e8;border-left:5px solid #9747FF;border-radius:8px;" class="px-3 py-2 pb-3 hover">
+                                    <div class="align-items-center">
+                                        <div><h6 class="text-muted mt-2">Inctive Agents</h6></div>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <h6 class="fw-bold text-dark">13,344</h6>
+                                            <div>
+                                                <span style="background-color:#ff0000;" class="badge p-2 d-flex align-items-center fw-bold"><img src="/assets/img/close.png" width="11px" class="me-2" alt="">122</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- <div class="row row-cols-lg-2 row-cols-md-1 row-cols-1 mt-3 g-3">
+                        <div class="col d-flex justify-content-center align-items-start">
+                            <img src="/assets/img/Debt Value Chat.png" width="500px" alt="">
+                        </div>
+                        <div class="col d-flex justify-content-center align-items-">
+                            <img src="/assets/img/Chart.png"  width="500px" height="315px" alt="">
+                        </div>
+                    </div> -->
+                    <div class="row mt-3 d-flex justify-content-center">
+                        <div class="col-lg-5 col-md-12 col-sm-12 d-flex justify-content-center">
+                            <div class="row">
+                                <img src="/assets/img/Chart.png" alt="">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12 col-sm-12 d-flex mt-lg-0 mt-md-2 mt-sm-2">
+                            <div class="row">
+                                <img src="/assets/img/Debt Value Chat.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row row-cols-lg-3 row-cols-md-1 row-cols-1 mt-3 box-shadow p-2" style="border-radius: 20px;">
+                        <div class="col px-5">
+                            <div class="p- d-flex align-items-center">
+                                <div class="bg-gradient p-4 rounded-circle">
+                                    <img src="/assets/img/call.png" alt="">
+                                </div>
+                                <div class="d-flex align-items-center row mt-4 ms-1">
+                                    <div><h6 style="font-size:12px;" class="text-muted m-0">Call Made</h6></div>
+                                    <div><h5 class="fw-bold m-0">2,044</h5></div>
+                                    <div><p style="font-size:12px;"><img src="/assets/img/arrow-up purple.png" alt=""><span class="text-gradient">13%</span> in last 6 month</p></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col px-5">
+                            <div class="p- d-flex align-items-center">
+                                <div class="bg-gradient p-4 rounded-circle">
+                                    <img src="/assets/img/email.png" alt="">
+                                </div>
+                                <div class="d-flex align-items-center row mt-4 ms-1">
+                                    <div><h6 style="font-size:12px;" class="text-muted m-0">Emial Sent</h6></div>
+                                    <div><h5 class="fw-bold m-0">19,000</h5></div>
+                                    <div><p style="font-size:12px;"><img src="/assets/img/arrow-down red.png" alt=""><span class="text-danger">13%</span> in last 6 month</p></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col px-5">
+                            <div class="p- d-flex align-items-center">
+                                <div class="bg-gradient p-4 rounded-circle">
+                                    <img src="/assets/img/sms.png" alt="">
+                                </div>
+                                <div class="d-flex align-items-center row mt-4 ms-1">
+                                    <div><h6 style="font-size:12px;" class="text-muted m-0">SMS Sent</h6></div>
+                                    <div><h5 class="fw-bold m-0">1,344</h5></div>
+                                    <div><p style="font-size:12px;"><img src="/assets/img/arrow-up purple.png" alt=""><span class="text-gradient">13%</span> in last 6 month</p></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+        
+        <!-- BOOTSTRAP JS FILE -->
+        <script src="../assets/bootstrap-5.2.3-dist/js/bootstrap.min.js"></script>
+        <script src="../assets/bootstrap-5.0.2-dist/js/bootstrap.bundle.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+        <!-- Jquery -->
+        <script src="/assets/js/jquery.js"></script>
+        <!-- Debt Js files -->
+        <script src="/assets/js/dashboard.js"></script>
+        <!-- Sweet Alert  -->
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script>
+            $('#sidebar').load('/assets/components/sidebar.html');
+        </script>
+        <script>fetchTotalCompany();</script>
+    </body>
+</html>
