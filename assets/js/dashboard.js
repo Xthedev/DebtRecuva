@@ -4,9 +4,10 @@ function fetchTotalCompany(){
     // select the id of the company tag
     var totalCompany = document.getElementById("Totalcompany");
     var totalDebtors = document.getElementById("Totaldebtors");
-    var totalAgents = document.getElementById("Totalagents");
+    var totalAgents = document.getElementById("Totalagents");Activeagents
+    var activeDebtors = document.getElementById("Activeagents");
     // console.log(totalCompany);
-    if(!totalCompany.innerHTML=="" || !totalDebtors.innerHTML=="" || !totalAgents.innerHTML==""){
+    if(!totalCompany.innerHTML=="" || !totalDebtors.innerHTML=="" || !totalAgents.innerHTML=="" || !activeDebtors.innerHTML==""){
          // CONNECTION 
         $.ajax({
             url: `${baseURL}/statistics/all`,
@@ -18,7 +19,8 @@ function fetchTotalCompany(){
             "data": JSON.stringify({
                 "totalcompanies": "string",
                 "totaldebtors": "string",
-                "totalagents": "string"
+                "totalagents": "string",
+                "activeassignedagents": "string"
             }),
             success: function(response){
                 // console.log('ajax.success');
@@ -29,6 +31,7 @@ function fetchTotalCompany(){
                     totalCompany.innerHTML=response.totalcompanies;
                     totalDebtors.innerHTML=response.totaldebtors;
                     totalAgents.innerHTML=response.totalagents;
+                    activeDebtors.innerHTML=response.activeassignedagents;
                 }
             },
             error: function(xhr, status) {
