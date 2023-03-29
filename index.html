@@ -8,12 +8,11 @@
         <!-- Font Awesome CSS File -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
         <!-- Bootstrap CSS File -->
-        <link rel="stylesheet" href="./assets/bootstrap-5.0.2-dist/css/bootstrap.css">
+        <link rel="stylesheet" href="/assets/bootstrap-5.0.2-dist/css/bootstrap.css">
         <!-- Debt Recova -->
-        <link rel="stylesheet" href="./assets/css/debt.css">
+        <link rel="stylesheet" href="/assets/css/debt.css">
     </head>
     <body>
-
         <div class="d-flex" id="wrapper">
              <!-- Loo Holder -->
             <div class="box-shadow d-flex justify-content-center align-items-center" id="logo-wrapper">
@@ -30,8 +29,8 @@
             <!-- Page Content -->
             <div class="container-fluid p-5 d-flex justify-content-center align-items-center" id="authentication-content-wrapper">
                 <div class="container d-flex p-5">
-                   <div class="row d-flex justify-content-center">
-                        <h4>Sign Up</h4>
+                   <div class="row p-3 d-flex justify-content-center">
+                        <h4>Sign In</h4>
                         <div class="d-flex mt-2">
                             <a href="#" class="btn btn-warning  align-items-center text-white rounded-pill">
                                 <img style="filter: invert();" class="me-2" src="/assets/img/google.svg" alt="" width="18px">
@@ -45,50 +44,30 @@
                             </a>
                         </div>
                         <hr class="hr my-4">
-                        <div class="row d-flex p-0">
-                            <div class="col-lg-6">
-                                <input style="height:50px;font-size:14px;" id="firstname" class="form-control px-3 rounded-pill" type="text" placeholder="First Name">
-                            </div>
-                            <div class="col-lg-6 mt-lg-0 mt-md-3 mt-sm-3">
-                                <input style="height:50px;font-size:14px;" id="lastname" class="form-control px-3 rounded-pill" type="text" placeholder="Last Name">
+                        <div class="row mt-3 p-0">
+                            <div class="col-lg-12">
+                                <input id="email" style="height:50px;font-size:14px;" class="form-control px-3 rounded-pill" type="email" placeholder="Email" aria-label="default input example">
                             </div>
                         </div>
                         <div class="row mt-3 p-0">
                             <div class="col-lg-12">
-                                <input style="height:50px;font-size:14px;" id="email" class="form-control px-3 rounded-pill" type="email" placeholder="Email">
+                                <input id="password" style="height:50px;font-size:14px;" class="form-control px-3 rounded-pill" type="password" placeholder="Password" aria-label="default input example">
                             </div>
-                        </div>
-                        <div class="row mt-3 p-0">
-                            <div class="col-lg-12">
-                                <input style="height:50px;font-size:14px;" id="mobileno" class="form-control px-3 rounded-pill" type="number" placeholder="Mobile No.">
-                            </div>
-                        </div>
-                        <div class="row mt-3 p-0">
-                            <div class="col-lg-12">
-                                <input style="height:50px;font-size:14px;" id="password" class="form-control px-3 rounded-pill" type="password" placeholder="Password">
-                            </div>
-                        </div>
-                        <div class="row mt-3">
-                            <select style="height:50px;font-size:14px;" id="usertype" class="disabledByMe form-select px-3 rounded-pill" aria-label="Default select example">
-                                <option value="agent">Agent</option>
-                            </select>
                         </div>
                         <div class="d-flex text-center mt-3">
                             <div class="me-2">
-                                <input name="checked" class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                             </div>
                             <div style="font-size: 14px;">
-                                <p class="text-muted">Creating an account means you're okay with our <span class="text-gradient"><b>Terms of Service </b></span>,
-                                    <b><span class="text-gradient">Privacy Policy</span></b>. and our default <b><span class="text-gradient">Notification Settings</span></b>.
-                                </p>
+                                <p class="text-muted">Remember Me</p>
                             </div>
                         </div>
                         <div class="row">
-                            <div id="loader" style="position:absolute; width:0px;" class="mt-1"></div>
-                            <a href="javascript:void(0);" onclick="signUp()" class="btn butt bg-gradient border-0 py-3 rounded-pill fw-bold card-link">Sign Up</a>
+                            <div id="loader" style="position:absolute;width:0px;" class="mt-1"></div>
+                            <a href="javascript:void(0)" onclick="logIn()" class="btn butt bg-gradient border-0 py-3 rounded-pill fw-bold card-link">Sign In</a>
                         </div>
-                        <div class="row text-center mt-3">
-                            <h6 style="font-size: 14px;" class="text-muted">Already have an account? <a href="sign-in.html" class="fw-bold text-gradient">Sign In</a></h6>
+                        <div class="mt-3">
+                            <a style="font-size: 14px;" class="text-gradient" href="/pages/forgotpassword.html">Forgot Password?</a>
                         </div>
                    </div>
                 </div>
@@ -104,12 +83,15 @@
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
         <!-- Jquery -->
         <script src="/assets/js/jquery.js"></script>
-        <!-- Debt js files -->
-        <script src="/assets/js/auth.js"></script>
-        <!-- Sweet alert -->
+        <!-- Sweet Alert  -->
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> -->
+        
+        <!-- Debt js file -->
+        <script src="/assets/js/auth.js"></script>
+        
         <script>
-            $('#sidebar').load('../assets/components/sidebar.html');
+            $('#sidebar').load('/assets/components/sidebar.html');
         </script>
     </body>
 </html>
