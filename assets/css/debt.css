@@ -322,6 +322,40 @@ input:checked + .slider:before {
     padding: 13px 0px !important;
     font-size: 11px !important;
   }
+  .sidebar .sidebar-top{
+    background-position: bottom;
+    height: 90px;
+  }
+  .sidebar .sidebar-top img{
+    width: 100px;
+    margin-top: 1.2rem !important;
+  }
+  .sidebar-center{
+    height: 68vh !important;
+  }
+  .sidebar-center ul li {
+    padding: 3px 5px !important;
+  }
+  .sidebar-center ul li img{
+    width: 20px !important;
+  }
+  .sidebar-center ul li a {
+    font-size: 11px !important;
+  }
+  .sidebar-bottom{
+    height: 120px !important;
+  }
+  .logout_btn{
+    height: 40px !important;
+    bottom: 9px !important;
+  }
+  .logout_btn img:nth-child(1){
+    width: 35px !important;
+    height: 35px !important;
+  }
+  .dropdown-container ul li{
+    padding: 8px 0px !important;
+  }
 }
 
 /* Sidebar */
