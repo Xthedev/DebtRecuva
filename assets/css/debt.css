@@ -284,6 +284,44 @@ input:checked + .slider:before {
   #page-content-wrapper{
     padding: 0 50px;
   }
+  .logo-holder {
+    height: 300px;
+    background: rgb(83,42,198);
+    background: linear-gradient(284deg, rgba(83,42,198,1) 0%, rgba(138,76,190,1) 100%);
+    border-bottom-right-radius: 300px;
+    border-bottom-left-radius: 250px;
+    border-top-right-radius: 200px;
+    border-top-left-radius: 200px;
+  }
+  .logo-holder img{
+    width: 100px;
+  }
+  .login h4{
+    font-size: 20px;
+  }
+  .login .google{
+    padding: 3px 8px;
+    font-size: 14px;
+  }
+  .login .google img{
+    width: 13px;
+  }
+  .login .facebook img{
+    width: 8px;
+  }
+  .login #email{
+    height: 140% !important;
+    font-size: 13px !important;
+  }
+  .login #password{
+    height: 120% !important;
+    font-size: 12px !important;
+    margin-top: 5px !important;
+  }
+  .login .sign_in{
+    padding: 13px 0px !important;
+    font-size: 11px !important;
+  }
 }
 
 /* Sidebar */
