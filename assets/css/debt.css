@@ -280,6 +280,12 @@ input:checked + .slider:before {
   right: 0px;
 }
 
+@media only screen and (max-width: 1500px) {
+  #page-content-wrapper{
+    padding: 0 50px;
+  }
+}
+
 /* Sidebar */
 #sidebar-wrapper {
   width: 221px;
