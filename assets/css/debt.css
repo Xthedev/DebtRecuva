@@ -330,9 +330,9 @@ input:checked + .slider:before {
     width: 100px;
     margin-top: 1.2rem !important;
   }
-  /* .sidebar-center{
-    height: 68vh !important;
-  } */
+  .sidebar-center{
+    height: calc(100vh - 210px) !important;
+  }
   .sidebar-center ul li {
     padding: 3px 5px !important;
   }

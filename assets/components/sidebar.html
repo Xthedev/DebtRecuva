@@ -88,10 +88,10 @@
                 <li class="mt-3 ps-0" id="smsAndEmailLink">
                     <a href="/pages/debtor-marketing.html" class="p-0 text-gradient">Call and Sms</a>
                 </li>
-                   <li class="mt-3 ps-0" id="smsAndEmailLink">
+                   <li class="mt-3 ps-0" id="bulkEmailLink">
                     <a href="/pages/debtor-email.html" class="p-0 text-gradient">Bulk Emails</a>
                   </li>
-                 <li class="mt-3 ps-0" id="smsAndEmailLink">
+                 <li class="mt-3 ps-0" id="bulkSmsLink">
                     <a href="/pages/debtor-sms.html" class="p-0 text-gradient">Bulk Sms</a>
                   </li>
             </ul>
@@ -240,6 +240,8 @@
             if(activePage.includes('email-template')){ $('#callCenterLink').addClass('active') }
             if(activePage.includes('customs-sms')){ $('#callCenterLink').addClass('active') }
             if(activePage.includes('customs-email')){ $('#callCenterLink').addClass('active') }
+            if(activePage.includes('debtor-email')){ $('#callCenterLink').addClass('active') }
+            if(activePage.includes('debtor-sms')){ $('#callCenterLink').addClass('active') }
             //Call Center
 
             // Analytics
@@ -303,6 +305,9 @@
             if(activePage.includes('email-template')){ $('#smsAndEmailLink').addClass('Active') }
             if(activePage.includes('customs-sms')){ $('#smsAndEmailLink').addClass('Active') }
             if(activePage.includes('customs-email')){ $('#smsAndEmailLink').addClass('Active') }
+            if(activePage.includes('debtor-email')){ $('#bulkEmailLink').addClass('Active') }
+            if(activePage.includes('debtor-sms')){ $('#bulkSmsLink').addClass('Active') }
+
             // CALL CENTER 
 
             // Analytics
