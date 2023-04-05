@@ -37,12 +37,20 @@
                         </div>
                     </div>
                     <div class="row box-shadow p-3 mt-3" style="border-radius: 20px;border-top-left-radius:0;">
+                        <div class="container">
+                            <div class="row" id="image_preview"></div>
+                        </div>
                         <div class="row row-cols-lg-4 row-cols-md-2 row-cols-sm-2 g-3 d-flex align-items-center mt-0">
                             <div class="col">
-                                <input type="text" class="form-control" id="" placeholder="Upload CSV">
+                                <form method="post" enctype="multipart/form-data">
+                                    <div class="d-flex">
+                                        <input type="file" class="form-control" id="images" name="images[]" onchange="preview_images();" multiple/>
+                                    </div>
+                                </form>
                             </div>
                             <div class="col">
-                                <button class="btn butt border-0 fw-bold">Upload</button>
+                                <input onclick="upload_files()" type="button" class="btn butt border-0 fw-bold card-link" name='submit_image' value="Upload"/>
+                                <!-- <input onclick="return resetForm();" type="reset" class="btn butt border-0 fw-bold bg-danger card-link" name='reset_images' value="Reset"/> -->
                             </div>
                             <div class="col">
                                 <input type="text" class="form-control" id="" placeholder="Title">
@@ -93,6 +101,23 @@
         <script src="/assets/js/jquery.js"></script>
         <script>
             $('#sidebar').load('/assets/components/sidebar.html');
+        </script>
+        <script>
+            function preview_images() {
+                var total_file = document.getElementById("images").files.length;
+                for(var i=0;i<total_file;i++){
+                    $('#image_preview').append(
+                        `<div class='col-md-3'>
+                            <img style='width:100%' class='img-responsive' src='${URL.createObjectURL(event.target.files[i])}'>
+                        </div>
+                        `
+                    );
+                }
+            }
+            function resetForm(){
+                $("#image_preview").html("");
+                return true;
+            }
         </script>
     </body>
 </html>
