@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Debt Recuva - Dashboard</title>
+        <!-- Font Awesome CSS File -->        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+        <!-- Bootstrap CSS File -->
+        <link rel="stylesheet" href="../assets/bootstrap-5.0.2-dist/css/bootstrap.css">
+        <!-- Debt Recova -->
+        <link rel="stylesheet" href="../assets/css/debt.css">
+    </head>
+    <body>
+        <!-- -------------------------------- Modal -------------------------------- -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-xl">
+                <div class="modal-content p-5" style="border-radius:20px;">
+                    <div class="d-flex align-items-center">
+                        <div>
+                            <img src="/assets/img/agent-profile.png" width="60px" alt="" class="mt-1">
+                        </div>
+                        <div class="ms-3">
+                            <h5 class="card-title mt-2">Matt Henry</h5>
+                            <h6 class="card-subtitle mb-2 text-light-text">Call Agent</h6>
+                            <h6 class="card-subtitle mb-2 text-light-text">Uyo</h6>
+                        </div>
+                    </div>
+                    <div class="col-12 mt-2">
+                        <label for="" class="form-label fs-6 fw-bold text-muted"><b class="text-dark">Title :</b>   Missed Deadline</label>
+                    </div>
+                    <div class="col-12 mt-2">
+                        <label for="" class="form-label fs-6 fw-bold">Message</label>
+                    </div>
+                    <div>
+                        <p class="border p-3 rounded">
+                            Lorem ipsum dolor sit amet consectetur. Convallis in vel ultrices tempus tellus. Condimentum sollicitudin id egestas id facilisi aliquet vitae massa. Consectetur semper lacus sollicitudin odio tortor. Tempus adipiscing morbi id bibendum pellentesque. Auctor at libero suspendisse vestibulum quam. Blandit amet ac netus felis risus. Non quis urna tellus velit parturient. Sagittis dolor lorem consequat amet. Tortor fringilla venenatis lobortis eu enim sed. Bibendum adipiscing vel orci tincidunt suspendisse est ut amet felis.
+                            Pretium sed ultrices ornare sit scelerisque vulputate convallis. Congue ac quis sapien semper. Eu vestibulum eget viverra in lectus sed velit facilisis. Dui elementum laoreet laoreet id sit amet sed. Lacinia faucibus eget mattis tellus enim in placerat. Egestas morbi ipsum risus dignissim ac est quam eget. Euismod non diam pharetra neque. Odio feugiat suspendisse et eu neque nulla sollicitudin eu vulputate. Tempus nec at lobortis mauris non feugiat morbi at at. Tellus posuere ultrices urna sed imperdiet elementum fermentum. Fames lacus purus amet lacus purus facilisis. Sit nulla fames luctus amet erat viverra. Tristique diam malesuada libero sed.
+                        </p>
+                    </div>
+                    <div class="col-12 d-flex align-items-center justify-content-end mt-3">
+                        <div>
+                            <a href="#" class="card-link btn butt px-3 py-1 fw-bold">Close</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ---------------------------- End of Modal ----------------------------- -->
+        <div class="d-flex" id="wrapper">
+            <!-- Sidebar -->
+            <div class="box-shadow" id="sidebar-wrapper">
+                <nav id="sidebar" class="sidebar text-center bd-links">
+                  
+                </nav>
+            </div>
+            <!-- /#sidebar-wrapper -->
+    
+            <!-- Page Content -->
+            
+            <div class="container-fluid" id="page-content-wrapper">
+                <div class="container p-3" >
+                    <div class="box-shadow p-2 mt-4" style="border-radius: 20px;">
+                        <div class="row">
+                            <div class="col-lg-5 col-md-12 col-sm-12 d-flex align-items-center"> 
+                                <a href="/pages/Query.html" class="me-2 ms-2">
+                                    <img src="/assets/img/less than.png" alt="">
+                                </a>
+                                <span class="fs-4">|</span>
+                                <span class="fw-bold ms-2">History</span>
+                            </div>
+                            <!-- End of Side Left -->
+
+                            <!-- Side Right -->
+                            <div class="col-lg-7 col-md-12 col-sm-12 d-flex mt-lg-0 mt-md-2 mt-sm-2">
+
+                                <div class="ms-lg-auto header-form-input search-input-holder d-flex align-items-center">
+                                    <!-- <i class="fa-solid fa-search fs-5 text-light-text m-2 ms-1"></i> -->
+                                    <div>
+                                        <img src="/assets/img/search.png" alt="" width="17.82px" height="16px">
+                                    </div>
+                                    <input style="outline: none;" type="search" placeholder="Search" class="form-control bg-transparent border-0">
+                                </div>
+                                
+                                <div class="header-form-input select-input-holder d-flex align-items-center" style="margin-left:6px;">
+                                    <span class="sortby">Sort By : </span>
+                                    <select style="width: 70%; outline: none;" class="p-2 bg-transparent border-0 fw-bold" aria-label="Default select example">
+                                        <option selected>Newest</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                        </div>
+                    
+                       
+                            <!-- Table row -->
+                        <div class="row p-3">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <td scope="col" class="fw-light text-light-text">S/N</td>
+                                            <td scope="col" class="fw-light text-light-text">Date</td>
+                                            <td scope="col" class="fw-light text-light-text">Time</td>
+                                            <td scope="col" class="fw-light text-light-text">Creator</td>
+                                            <td scope="col" class="fw-light text-light-text">Topic</td>
+                                            <td scope="col" class="fw-light text-light-text">Message</td>
+                                            <td scope="col" class="fw-light text-light-text"></td>    
+                                        </tr>
+                                   </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="fw-bold">1</td>
+                                            <td class="fw-bold">23/4/2022</td>
+                                            <td class="fw-bold">7:00 A.M</td>
+                                            <td class="fw-bold">Dan Deloris</td>
+                                            <td class="fw-bold">Missed Deadline</td>
+                                            <td class="fw-bold">Lorem ipsum dolor sit amet consectetur.</td>
+                                            <td>
+                                                <a href="#" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn butt btn-sm fw- px-3 py-1 card-link">Details</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold">2</td>
+                                            <td class="fw-bold">23/4/2022</td>
+                                            <td class="fw-bold">7:00 A.M</td>
+                                            <td class="fw-bold">Dan Deloris</td>
+                                            <td class="fw-bold">Missed Deadline</td>
+                                            <td class="fw-bold">Lorem ipsum dolor sit amet consectetur.</td>
+                                            <td>
+                                                <a href="#" class="btn butt btn-sm fw- px-3 py-1 card-link">Details</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold">3</td>
+                                            <td class="fw-bold">23/4/2022</td>
+                                            <td class="fw-bold">7:00 A.M</td>
+                                            <td class="fw-bold">Dan Deloris</td>
+                                            <td class="fw-bold">Missed Deadline</td>
+                                            <td class="fw-bold">Lorem ipsum dolor sit amet consectetur.</td>
+                                            <td>
+                                                <a href="#" class="btn butt btn-sm fw- px-3 py-1 card-link">Details</a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold">4</td>
+                                            <td class="fw-bold">23/4/2022</td>
+                                            <td class="fw-bold">7:00 A.M</td>
+                                            <td class="fw-bold">Dan Deloris</td>
+                                            <td class="fw-bold">Missed Deadline</td>
+                                            <td class="fw-bold">Lorem ipsum dolor sit amet consectetur.</td>
+                                            <td>
+                                                <a href="#" class="btn butt btn-sm fw- px-3 py-1 card-link">Details</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <!-- /#page-content-wrapper -->
+        
+        <!-- BOOTSTRAP JS FILE -->
+        <script src="../assets/bootstrap-5.2.3-dist/js/bootstrap.min.js"></script>
+        <script src="../assets/bootstrap-5.0.2-dist/js/bootstrap.bundle.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+        <!-- Jquery -->
+        <script src="/assets/js/jquery.js"></script>
+        <script>
+            $('#sidebar').load('/assets/components/sidebar.html');
+        </script>
+    </body>
+</html>
