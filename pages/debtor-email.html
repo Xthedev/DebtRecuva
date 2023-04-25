@@ -18,6 +18,7 @@
         <link rel="stylesheet" href="../assets/bootstrap-5.0.2-dist/css/bootstrap.css">
         <!-- Debt Recova -->
         <link rel="stylesheet" href="../assets/css/debt.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     </head>
     <body>
         <div class="d-flex" id="wrapper">
@@ -45,18 +46,20 @@
                             <div class="col">
                                 <form method="post" enctype="multipart/form-data">
                                     <div class="d-flex">
-                                        <input type="file" class="form-control" id="images" name="images[]" onchange="preview_images();" multiple/>
+                                        <input type="file" class="form-control" id="file_upload" name="images[]" multiple/>
                                     </div>
                                 </form>
                             </div>
                             <div class="col">
-                                <input onclick="upload_files()" type="button" class="btn butt border-0 fw-bold card-link" name='submit_image' value="Upload"/>
+                                <input onclick="upload()" type="button" class="btn butt border-0 fw-bold card-link" name='submit_image' value="Upload"/>
                                 <input onclick="return resetForm();" type="reset" class="btn butt border-0 fw-bold bg-danger card-link" name='reset_images' value="Reset"/>
                             </div>
                           
-                            <div class="col-md-4">
-                                <input type="text" class="form-control" id="" placeholder="Subject">
+                          
+                            <div class="col-4">
+                                <input type="text" class="form-control" id="subject" placeholder="Subject">
                             </div>
+                            <p>Please Note in whatever CSV file being provided, the email column title must be ->   email  <- and the title must remain lower case letters.</p>
                         </div>
                         <div class="col-12 mt-3">
                             <label for="" class="form-label fs-6 fw-bold text-muted">Message</label>
@@ -64,7 +67,7 @@
                             <div class="p-3" id="summernote"></div>
                             <div class="p-1">
                                 <script class="col-lg-12">
-                                $('#summernote').summernote({
+                             var summernote=   $('#summernote').summernote({
                                     placeholder: 'Debt Recuva',
                                     tabsize: 1,
                                     height: 200
@@ -75,10 +78,10 @@
                         
                         <div class="col-12 d-flex align-items-center justify-content-between mt-2">
                             <div>
-                                <h6 class="fw-bold">Recipients : <span class="text-gradient">97</span></h6>
+                                <h6 class="fw-bold">Recipients : <span class="text-gradient" id="numberofemails">0</span></h6>
                             </div>
                             <div>
-                                <a href="#" class="card-link btn butt fw-bold">Send Email</a>
+                                <a href="#" class="card-link btn butt fw-bold" onclick="SendEmail()">Send Email</a>
                             </div>
                         </div>
                     </div>
@@ -97,26 +100,100 @@
         <script src="../assets/bootstrap-5.0.2-dist/js/bootstrap.bundle.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
         <!-- Jquery -->
+        <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
+       
         <script src="/assets/js/jquery.js"></script>
         <script>
             $('#sidebar').load('/assets/components/sidebar.html');
         </script>
         <script>
-            function preview_images() {
-                var total_file = document.getElementById("images").files.length;
-                for(var i=0;i<total_file;i++){
-                    $('#image_preview').append(
-                        `<div class='col-md-3'>
-                            <img style='width:100%' class='img-responsive' src='${URL.createObjectURL(event.target.files[i])}'>
-                        </div>
-                        `
-                    );
-                }
-            }
+       
             function resetForm(){
-                $("#image_preview").html("");
+                $("#file_upload").val("");
                 return true;
             }
+        </script>
+        <script>
+        var myjson=[];
+        function upload(){
+                	var files = document.getElementById('file_upload').files;
+                    if(files.length==0){
+                    alert("Please choose any file...");
+                    return;
+                    }
+                    var filename = files[0].name;
+                    var extension = filename.substring(filename.lastIndexOf(".")).toUpperCase();
+                    if (extension == '.CSV') {
+                        //Here calling another method to read CSV file into json
+                        csvFileToJSON(files[0]);
+                    }else{
+                        alert("Please select a valid csv file.");
+                    }
+            }
+
+       
+        function csvFileToJSON(file){
+          try {
+            var reader = new FileReader();
+            reader.readAsBinaryString(file);
+            reader.onload = function(e) {
+                var jsonData = [];
+                var headers = [];
+                var rows = e.target.result.split("\r\n");               
+                for (var i = 0; i < rows.length; i++) {
+                    var cells = rows[i].split(",");
+                    var rowData = {};
+                    for(var j=0;j<cells.length;j++){
+                        if(i==0){
+                            var headerName = cells[j].trim();
+                            headers.push(headerName);
+                        }else{
+                            var key = headers[j];
+                            if(key){
+                                rowData[key] = cells[j].trim();
+                            }
+                        }
+                    }
+                    //skip the first row (header) data
+                    if(i!=0){
+                        jsonData.push(rowData);
+                    }
+                }
+                  
+                //displaying the json result in string format
+                myjson=jsonData;
+                $('#numberofemails').html(myjson.length);
+                const result = myjson.map(({email})=>({email}))
+                myjson= result;
+                console.log(myjson)
+                swal("Csv has been loaded.")
+                }
+            }catch(e){
+                console.error(e);
+            }
+      }
+
+
+      function SendEmail(){
+        let emails=[];
+        let subject = $('#subject').val();
+        let message = summernote.summernote("code");
+        emails =myjson;
+        if(emails.length==0){
+            swal("there are no emails loaded");
+        }else{
+
+          let datatosend={
+            "emails":emails,
+            "subject":subject,
+            "message":message
+          }
+
+          
+
+        }
+      }
+      
         </script>
     </body>
 </html>
