@@ -175,21 +175,24 @@
 
 
       function SendEmail(){
-        let emails=[];
+      
         let subject = $('#subject').val();
         let message = summernote.summernote("code");
-        emails =myjson;
+        let emails =myjson;
         if(emails.length==0){
             swal("there are no emails loaded");
         }else{
 
           let datatosend={
-            "emails":emails,
+            "email":JSON.stringify(emails),
             "subject":subject,
             "message":message
           }
-
           
+         
+          $.post('http://54.37.17.252:3760/api/sendbulkemail',datatosend,function(data){
+           swal(data.message);
+          });
 
         }
       }
