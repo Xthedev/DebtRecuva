@@ -15,6 +15,16 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     </head>
     <body>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body p-4" style="font-size:14px;">
+                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="d-flex" id="wrapper">
             <!-- Sidebar -->
             <div class="box-shadow" id="sidebar-wrapper">
@@ -52,6 +62,8 @@
                                         <tr>
                                             <th scope="col" class="fw-bold text-light-text">S/N</th>
                                             <th scope="col" class="fw-bold text-light-text">To</th>
+                                            <th scope="col" class="fw-bold text-light-text">Date</th>
+                                            <th scope="col" class="fw-bold text-light-text">Time</th>
                                             <th scope="col" class="fw-bold text-light-text">Message</th>
                                             <th scope="col" class="fw-bold text-light-text">Status</th>
                                         </tr>
@@ -61,9 +73,15 @@
                                             <td>1</td>
                                             <td>Helloworld</td>
                                             <td>
-                                                <p>
-                                                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-                                                </p>
+                                                <span>02/03/2022</span>
+                                            </td>
+                                            <td>
+                                                <span>12:20:22 PM</span>
+                                            </td>
+                                            <td>
+                                                <button type="button" class="btn butt border-0 px-3 card-link" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                                    See message
+                                                </button>
                                             </td>
                                             <td>
                                                 <span class="text-success fw-bold">Delivered</span>
