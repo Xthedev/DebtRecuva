@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Debt Recuva - Dashboard</title>
+        <link rel="icon" href="../assets/img/debt R.png">
+        <!-- Font Awesome CSS File -->        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+        <!-- Bootstrap CSS File -->
+        <link rel="stylesheet" href="../assets/bootstrap-5.0.2-dist/css/bootstrap.css">
+        <!-- Debt Recova -->
+        <link rel="stylesheet" href="../assets/css/debt.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    </head>
+    <body>
+        <div class="d-flex" id="wrapper">
+            <!-- Sidebar -->
+            <div class="box-shadow" id="sidebar-wrapper">
+                <nav id="sidebar" class="sidebar text-center bd-links">
+                    
+                </nav>
+            </div>
+            <!-- /#sidebar-wrapper -->
+    
+            <!-- Page Content -->
+            <div class="container-fluid" id="page-content-wrapper">
+                <div class="container p-3">
+                    <div class="col-lg-12 col-md-12 col-sm-12 d-flex align-items-center">
+                        <div class="d-flex align-items-center">
+                            <h5 class="fw-bold mt-1">Bulk SMS</h5>
+                        </div>
+                    </div>
+                    <div class="row my-2">
+                        <div style="width: 410px; background: #bbb6c4; border-radius: 5px;" class="d-flex justify-content-center align-items-center p-1">
+                            <div>
+                                <a href="javascript:void(0);" type="button" class="btn butt-b border-0 fw-bold bg-gradient text-white card-link">My bulk sms</a>
+                            </div>
+                            <div>
+                                <a type="button" class="btn text-dark butt-a text-muted fw-bold" href="/pages/view-all-bulk-sms.html">All bulk sms</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row box-shadow p-3 mt-3" style="border-radius: 20px;border-top-left-radius:0;">
+                    <!-- Table Row -->
+                       <!-- Table Start here -->
+                       <div class="row">
+                            <div class="table-responsive">
+                                <table class="table" style="width:100%;overflow:hidden">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col" class="fw-bold text-light-text">S/N</th>
+                                            <th scope="col" class="fw-bold text-light-text">To</th>
+                                            <th scope="col" class="fw-bold text-light-text">Message</th>
+                                            <th scope="col" class="fw-bold text-light-text">Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Helloworld</td>
+                                            <td>
+                                                <p>
+                                                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                                                </p>
+                                            </td>
+                                            <td>
+                                                <span class="text-success fw-bold">Delivered</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- Table End Here -->
+                    </div>
+                </div>
+                    
+            </div>
+        <!-- /#page-content-wrapper -->
+
+        <!-- BOOTSTRAP JS FILE -->
+        <script src="../assets/bootstrap-5.2.3-dist/js/bootstrap.min.js"></script>
+        <script src="../assets/bootstrap-5.0.2-dist/js/bootstrap.bundle.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+        <!-- Jquery -->
+        <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
+       
+        <script src="/assets/js/jquery.js"></script>
+        <script>
+            $('#sidebar').load('/assets/components/sidebar.html');
+        </script>
+    </body>
+</html>

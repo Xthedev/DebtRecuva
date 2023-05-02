@@ -88,12 +88,18 @@
                 <li class="mt-3 ps-0" id="smsAndEmailLink">
                     <a href="/pages/debtor-marketing.html" class="p-0 text-gradient">Call and Sms</a>
                 </li>
-                   <li class="mt-3 ps-0" id="bulkEmailLink">
+                <li class="mt-3 ps-0" id="bulkEmailLink">
                     <a href="/pages/debtor-email.html" class="p-0 text-gradient">Bulk Emails</a>
-                  </li>
-                 <li class="mt-3 ps-0" id="bulkSmsLink">
+                </li>
+                <li class="mt-3 ps-0" id="viewBulkEmailLink">
+                    <a href="/pages/view-bulk-emails.html" class="p-0 text-gradient">View Bulk Emails</a>
+                </li>
+                <li class="mt-3 ps-0" id="bulkSmsLink">
                     <a href="/pages/debtor-sms.html" class="p-0 text-gradient">Bulk Sms</a>
-                  </li>
+                </li>
+                <li class="mt-3 ps-0" id="viewBulkSmsLink">
+                    <a href="/pages/view-bulk-sms.html" class="p-0 text-gradient">View Bulk Sms</a>
+                </li>
             </ul>
         </div>
         <li class="mt-3 py-1 px-2 dropdown-btn hi" onclick="clicked3()" id="analyticsLink">
@@ -242,6 +248,10 @@
             if(activePage.includes('customs-email')){ $('#callCenterLink').addClass('active') }
             if(activePage.includes('debtor-email')){ $('#callCenterLink').addClass('active') }
             if(activePage.includes('debtor-sms')){ $('#callCenterLink').addClass('active') }
+            if(activePage.includes('view-bulk-emails')){$('#callCenterLink').addClass('active')}
+            if(activePage.includes('view-all-bulk-emails')){$('#callCenterLink').addClass('active')}
+            if(activePage.includes('view-bulk-sms')){$('#callCenterLink').addClass('active')}
+            if(activePage.includes('view-all-bulk-sms')){$('#callCenterLink').addClass('active')}
             //Call Center
 
             // Analytics
@@ -312,7 +322,10 @@
             if(activePage.includes('customs-email')){ $('#smsAndEmailLink').addClass('Active') }
             if(activePage.includes('debtor-email')){ $('#bulkEmailLink').addClass('Active') }
             if(activePage.includes('debtor-sms')){ $('#bulkSmsLink').addClass('Active') }
-
+            if(activePage.includes('view-bulk-emails')){ $('#viewBulkEmailLink').addClass('Active') }
+            if(activePage.includes('view-all-bulk-emails')){ $('#viewBulkEmailLink').addClass('Active') }
+            if(activePage.includes('view-bulk-sms')){ $('#viewBulkSmsLink').addClass('Active') }
+            if(activePage.includes('view-all-bulk-sms')){ $('#viewBulkSmsLink').addClass('Active') }
             // CALL CENTER 
 
             // Analytics
