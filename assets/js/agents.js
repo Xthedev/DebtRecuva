@@ -224,7 +224,7 @@ function fecthAgent(){
               // TABLE
             });
           } else {
-            $('#allCompanies').html("<tr><td colspan='9' class='text-center'><h3 class='pt-2'>No Debtportfolio added yet</h3></td></tr>");
+            $('#allCompanies').html("<tr><td colspan='9' class='text-center'><h3 class='pt-2'>No Agents added yet</h3></td></tr>");
           }
           // TABLE
 
