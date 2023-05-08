@@ -182,11 +182,13 @@
         if(emails.length==0){
             swal("there are no emails loaded");
         }else{
-
+           let user = JSON.parse(localStorage.getItem('user'));
+            
           let datatosend={
             "email":JSON.stringify(emails),
             "subject":subject,
-            "message":message
+            "message":message,
+             "from":user.email
           }
           
          
