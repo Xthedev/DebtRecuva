@@ -57,6 +57,7 @@ function logIn(){
         }else{
           swal("",response.message,"success");
           localStorage.setItem('access', response.authToken);
+          localStorage.setItem('user',JSON.stringify(response.data);
           setTimeout(()=>{
             location.assign('/pages/index2.html');
           },2500)
